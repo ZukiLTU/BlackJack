@@ -1,1 +1,3 @@
 # BlackJack
+
+Open Source game
