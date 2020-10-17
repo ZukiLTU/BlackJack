@@ -247,11 +247,62 @@ namespace BlackJack
         private void InitCartes()
         {
             //Cols();
-            Image Arriere = Properties.Resources.b1fv;
-            pictureBoxJoueur.Image = Arriere;
-            pictureBoxJoueur2.Image = Arriere;
-            pictureBoxCasino.Image = Arriere;
-            pictureBoxCasino2.Image = Arriere;
+            if (noir)
+            {
+                pictureBoxCasino.Image = Properties.Resources.noir;
+                pictureBoxCasino2.Image = Properties.Resources.noir;
+                pictureBoxJoueur.Image = Properties.Resources.noir;
+                pictureBoxJoueur2.Image = Properties.Resources.noir;
+            }
+
+            else if (bleu)
+            {
+                pictureBoxCasino.Image = Properties.Resources.bleu;
+                pictureBoxCasino2.Image = Properties.Resources.bleu;
+                pictureBoxJoueur.Image = Properties.Resources.bleu;
+                pictureBoxJoueur2.Image = Properties.Resources.bleu;
+            }
+
+            else if (orange)
+            {
+                pictureBoxCasino.Image = Properties.Resources.orange;
+                pictureBoxCasino2.Image = Properties.Resources.orange;
+                pictureBoxJoueur.Image = Properties.Resources.orange;
+                pictureBoxJoueur2.Image = Properties.Resources.orange;
+            }
+
+            else if (rouge)
+            {
+                pictureBoxCasino.Image = Properties.Resources.rouge;
+                pictureBoxCasino2.Image = Properties.Resources.rouge;
+                pictureBoxJoueur.Image = Properties.Resources.rouge;
+                pictureBoxJoueur2.Image = Properties.Resources.rouge;
+            }
+
+            else if (vert)
+            {
+                pictureBoxCasino.Image = Properties.Resources.vert;
+                pictureBoxCasino2.Image = Properties.Resources.vert;
+                pictureBoxJoueur.Image = Properties.Resources.vert;
+                pictureBoxJoueur2.Image = Properties.Resources.vert;
+            }
+
+            else if (violet)
+            {
+                pictureBoxCasino.Image = Properties.Resources.violet;
+                pictureBoxCasino2.Image = Properties.Resources.violet;
+                pictureBoxJoueur.Image = Properties.Resources.violet;
+                pictureBoxJoueur2.Image = Properties.Resources.violet;
+            }
+
+            else
+            {
+                Image Arriere = Properties.Resources.b1fv;
+                pictureBoxJoueur.Image = Arriere;
+                pictureBoxJoueur2.Image = Arriere;
+                pictureBoxCasino.Image = Arriere;
+                pictureBoxCasino2.Image = Arriere;
+            }
         }
 
         private void Commencer()
@@ -460,35 +511,5 @@ namespace BlackJack
             }
         }
         #endregion
-
-        /*public void Cols()
-        {
-            if (Noir)
-            {
-                Image ArriereNoir = Properties.Resources.noir;
-                pictureBoxJoueur.Image = ArriereNoir;
-                pictureBoxJoueur2.Image = ArriereNoir;
-                pictureBoxCasino.Image = ArriereNoir;
-                pictureBoxCasino2.Image = ArriereNoir;
-            }
-
-            else if (Bleu)
-            {
-                Image ArriereBleu = Properties.Resources.b1fv;
-                pictureBoxJoueur.Image = ArriereBleu;
-                pictureBoxJoueur2.Image = ArriereBleu;
-                pictureBoxCasino.Image = ArriereBleu;
-                pictureBoxCasino2.Image = ArriereBleu;
-            }
-
-            else
-            {
-                Image Arriere = Properties.Resources.b1fv;
-                pictureBoxJoueur.Image = Arriere;
-                pictureBoxJoueur2.Image = Arriere;
-                pictureBoxCasino.Image = Arriere;
-                pictureBoxCasino2.Image = Arriere;
-            }
-        }*/
     }
 }

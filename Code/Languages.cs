@@ -28,6 +28,7 @@ namespace BlackJack
             distribuerToolStripMenuItem.Text = "Dalinti";
             resteToolStripMenuItem.Text = "Baigti paskirstyti";
             paramètresToolStripMenuItem.Text = "Nustatymai";
+
             lblBal.Text = "Pinigai :" + Argent;
             label1.Text = "Suma :";
             lblTxCasino.Text = "Kazino : " + sommecasino;
