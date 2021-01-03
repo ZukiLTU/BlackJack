@@ -29,10 +29,9 @@ namespace BlackJack
 
         #endregion
 
-        #region couleurs
-        bool Noir, Bleu;
+        #region Couleurs
+        bool noir, bleu, orange, rouge, violet, vert;
         #endregion
-
         Random random = new Random();
 
         List<int> CartesUtilisees = new List<int>();
@@ -286,9 +285,19 @@ namespace BlackJack
 
         private void bleuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Bleu = true;
-            Noir = false;
-        }
+            violet = false;
+            vert = false;
+            bleu = true;
+            orange = false;
+            rouge = false;
+            noir = false;
+            pictureBoxJoueur.Image = Properties.Resources.bleu;
+            pictureBoxJoueur2.Image = Properties.Resources.bleu;
+            pictureBoxJoueur3.Image = Properties.Resources.bleu;
+            pictureBoxCasino.Image = Properties.Resources.bleu;
+            pictureBoxCasino2.Image = Properties.Resources.bleu;
+            pictureBoxCasino4.Image = Properties.Resources.bleu;
+    }
 
         private void rougeToolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -297,19 +306,68 @@ namespace BlackJack
             fbj.BackgroundImage = bg;
         }
 
+        private void orangeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            violet = false;
+            vert = false;
+            orange = true;
+            bleu = false;
+            noir = false;
+            rouge = false;
+            pictureBoxJoueur.Image = Properties.Resources.orange;
+            pictureBoxJoueur2.Image = Properties.Resources.orange;
+            pictureBoxJoueur3.Image = Properties.Resources.orange;
+            pictureBoxCasino.Image = Properties.Resources.orange;
+            pictureBoxCasino2.Image = Properties.Resources.orange;
+            pictureBoxCasino4.Image = Properties.Resources.orange;
+        }
 
         private void noirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Noir = true;
-            Bleu = false;
-            //Cols();
+            violet = false;
+            vert = false;
+            noir = true;
+            rouge = false;
+            orange = false;
+            bleu = false;
+            pictureBoxJoueur.Image = Properties.Resources.noir;
+            pictureBoxJoueur2.Image = Properties.Resources.noir;
+            pictureBoxJoueur3.Image = Properties.Resources.noir;
+            pictureBoxCasino.Image = Properties.Resources.noir;
+            pictureBoxCasino2.Image = Properties.Resources.noir;
+            pictureBoxCasino4.Image = Properties.Resources.noir;
+        }
 
-            if(Bleu)
-            {
-                Noir = false;
-                Bleu = true;
-                //Cols();
-            }
+        private void violetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            violet = true;
+            vert = false;
+            noir = false;
+            rouge = false;
+            orange = false;
+            bleu = false;
+            pictureBoxJoueur.Image = Properties.Resources.violet;
+            pictureBoxJoueur2.Image = Properties.Resources.violet;
+            pictureBoxJoueur3.Image = Properties.Resources.violet;
+            pictureBoxCasino.Image = Properties.Resources.violet;
+            pictureBoxCasino2.Image = Properties.Resources.violet;
+            pictureBoxCasino4.Image = Properties.Resources.violet;
+        }
+
+        private void vertToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            violet = false;
+            vert = true;
+            noir = false;
+            rouge = false;
+            orange = false;
+            bleu = false;
+            pictureBoxJoueur.Image = Properties.Resources.vert;
+            pictureBoxJoueur2.Image = Properties.Resources.vert;
+            pictureBoxJoueur3.Image = Properties.Resources.vert;
+            pictureBoxCasino.Image = Properties.Resources.vert;
+            pictureBoxCasino2.Image = Properties.Resources.vert;
+            pictureBoxCasino4.Image = Properties.Resources.vert;
         }
     }
 }
