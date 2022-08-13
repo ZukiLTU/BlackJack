@@ -15,6 +15,6 @@ cd /bin/Debug/ && start Blackjack.exe
 ## Features
 <ul>
   <li>Customizable cards</li>
-  <li>Multilanguage support (English, French and Lithuanian)</li> 
+  <li>Multilanguage support (French and Lithuanian)</li> 
   <li>SOON : Scoreboard</li>
 </ul>
