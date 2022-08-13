@@ -9,6 +9,6 @@ Blackjack, the famous game on C#.
 # Windows :
 ``` 
 git clone https://github.com/ZukiLTU/BlackJack && cd Blackjack/
-cd /bin/Debug/ && ./Blackjack.exe
+cd /bin/Debug/ && start Blackjack.exe
 ```
 
