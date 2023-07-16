@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT Type="Advanced Installer" CreateVersion="17.1.1" version="17.1.1" Modules="simple" RootPath="." Language="en" Id="{6307D630-F313-4AD0-ACAE-DC18907E293F}">
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_BlackJack.exe.config_1" Value="..\BlackJack\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_BlackJack.exe_2" Value="..\BlackJack\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_BlackJack.pdb_2" Value="..\BlackJack\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_BlackJack.exe.config_1" Value="BlackJack.exe.config"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_BlackJack.exe_2" Value="BlackJack.exe"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_BlackJack.pdb_2" Value="BlackJack.pdb"/>
+    <ROW Property="ALLUSERS" Value="1"/>
+    <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
+    <ROW Property="ARPPRODUCTICON" Value="aces.exe" Type="8"/>
+    <ROW Property="Manufacturer" Value="Tadas"/>
+    <ROW Property="ProductCode" Value="1033:{881F0D2A-DE4D-4C3D-B4C6-92C26C7BEA86} " Type="16"/>
+    <ROW Property="ProductLanguage" Value="1033"/>
+    <ROW Property="ProductName" Value="BlackJack"/>
+    <ROW Property="ProductVersion" Value="2.0.1" Type="32"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
+    <ROW Property="UpgradeCode" Value="{99083761-B8B1-46F0-954E-B8B04E0CC5B5}"/>
+    <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsType9XDisplay" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40Display" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50Display" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5X" MultiBuildValue="DefaultBuild:Windows XP/2003" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5XDisplay" MultiBuildValue="DefaultBuild:Windows XP/2003" ValueLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
+    <ROW Directory="BlackJack_Dir" Directory_Parent="APPDIR" DefaultDir="BLACKJ~1|BlackJack"/>
+    <ROW Directory="Debug_1_Dir" Directory_Parent="obj_Dir" DefaultDir="Debug"/>
+    <ROW Directory="Debug_Dir" Directory_Parent="bin_Dir" DefaultDir="Debug"/>
+    <ROW Directory="Properties_Dir" Directory_Parent="BlackJack_Dir" DefaultDir="PROPER~1|Properties"/>
+    <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
+    <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+    <ROW Directory="TempPE_Dir" Directory_Parent="Debug_1_Dir" DefaultDir="TempPE"/>
+    <ROW Directory="bin_Dir" Directory_Parent="BlackJack_Dir" DefaultDir="bin"/>
+    <ROW Directory="cartes_Dir" Directory_Parent="img_Dir" DefaultDir="cartes"/>
+    <ROW Directory="fondcartes_Dir" Directory_Parent="img_Dir" DefaultDir="FONDCA~1|fond cartes"/>
+    <ROW Directory="img_1_Dir" Directory_Parent="Debug_Dir" DefaultDir="img"/>
+    <ROW Directory="img_Dir" Directory_Parent="BlackJack_Dir" DefaultDir="img"/>
+    <ROW Directory="obj_Dir" Directory_Parent="BlackJack_Dir" DefaultDir="obj"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="APPDIR" ComponentId="{F37DEA25-A1C2-406B-9AB9-87E1C3D65B1D}" Directory_="APPDIR" Attributes="0"/>
+    <ROW Component="AssemblyInfo.cs" ComponentId="{A2E14C1F-504B-4D19-807D-AD5389BF08B2}" Directory_="Properties_Dir" Attributes="0" KeyPath="AssemblyInfo.cs" Type="0"/>
+    <ROW Component="BlackJack.AboutBox1.resources" ComponentId="{F6B54BB0-98EA-4D30-8CF4-0C84A2C04A2D}" Directory_="Debug_1_Dir" Attributes="0" KeyPath="BlackJack.AboutBox1.resources" Type="0"/>
+    <ROW Component="BlackJack.exe" ComponentId="{374A8ACC-DDEC-479D-87D3-D1CEE7702702}" Directory_="Debug_Dir" Attributes="0" KeyPath="BlackJack.exe"/>
+    <ROW Component="BlackJack.exe.config" ComponentId="{A8B59985-43C0-4C2C-89C1-1A5F0C1C628A}" Directory_="Debug_Dir" Attributes="0" KeyPath="BlackJack.exe.config" Type="0"/>
+    <ROW Component="BlackJack.exe_1" ComponentId="{2868AAAF-3145-4C78-9E20-2F6A3F226299}" Directory_="Debug_1_Dir" Attributes="0" KeyPath="BlackJack.exe_1"/>
+    <ROW Component="BlackJack_PrimaryOutput" ComponentId="{B634070D-D998-4866-BC02-E0A5EEFBC315}" Directory_="BlackJack_Dir" Attributes="0" KeyPath="BlackJack.exe_2"/>
+    <ROW Component="BlackJack_SymbolsOutput" ComponentId="{70B81510-1229-4726-B6BE-7DA4DBCBB94C}" Directory_="BlackJack_Dir" Attributes="0" KeyPath="BlackJack.pdb_2"/>
+    <ROW Component="C.png" ComponentId="{FFFC7127-C0B0-46AF-A14F-F8E9CD62EA01}" Directory_="img_1_Dir" Attributes="0" KeyPath="C.png" Type="0"/>
+    <ROW Component="C.png_1" ComponentId="{C234CCA8-1028-431F-AC99-D65CAF6AA139}" Directory_="cartes_Dir" Attributes="0" KeyPath="C.png_9" Type="0"/>
+    <ROW Component="Main1.Designer.cs.dll" ComponentId="{F7378E1A-06E6-4394-90B7-AC8C064FDF5C}" Directory_="TempPE_Dir" Attributes="0" KeyPath="Main1.Designer.cs.dll"/>
+    <ROW Component="ProductInformation" ComponentId="{6C7E3C9E-A472-4231-A519-DC0CD737D6EC}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
+    <ROW Component="Program.cs" ComponentId="{F210C4B2-F3F8-4068-A43E-D94CA8C95491}" Directory_="BlackJack_Dir" Attributes="0" KeyPath="Program.cs" Type="0"/>
+    <ROW Component="Properties.Resources.Designer.cs.dll" ComponentId="{55A4C94C-856C-4FD3-8F82-D5DBF7087ABE}" Directory_="TempPE_Dir" Attributes="0" KeyPath="Properties.Resources.Designer.cs.dll"/>
+    <ROW Component="SHORTCUTDIR" ComponentId="{6487603E-025C-44A4-ABB8-A1CD67985F4A}" Directory_="SHORTCUTDIR" Attributes="0"/>
+    <ROW Component="background.jpg" ComponentId="{B9DEDB2D-26A5-49C2-B595-CB017E731A8B}" Directory_="img_Dir" Attributes="0" KeyPath="background.jpg" Type="0"/>
+    <ROW Component="bleu.png" ComponentId="{4D61BA44-BD8A-4946-8993-AEED346AE972}" Directory_="fondcartes_Dir" Attributes="0" KeyPath="bleu.png" Type="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0"/>
+    <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="Program.cs" Component_="Program.cs" FileName="Program.cs" Attributes="0" SourcePath="..\BlackJack\Program.cs" SelfReg="false"/>
+    <ROW File="purple_back.png" Component_="Program.cs" FileName="PURPLE~1.PNG|purple_back.png" Attributes="0" SourcePath="..\BlackJack\purple_back.png" SelfReg="false"/>
+    <ROW File="red_back.png" Component_="Program.cs" FileName="red_back.png" Attributes="0" SourcePath="..\BlackJack\red_back.png" SelfReg="false"/>
+    <ROW File="BlackJack.exe" Component_="BlackJack.exe" FileName="BLACKJ~1.EXE|BlackJack.exe" Attributes="0" SourcePath="..\BlackJack\bin\Debug\BlackJack.exe" SelfReg="false" DigSign="true"/>
+    <ROW File="BlackJack.exe.config" Component_="BlackJack.exe.config" FileName="BLACKJ~1.CON|BlackJack.exe.config" Attributes="0" SourcePath="..\BlackJack\bin\Debug\BlackJack.exe.config" SelfReg="false"/>
+    <ROW File="BlackJack.pdb" Component_="BlackJack.exe" FileName="BLACKJ~1.PDB|BlackJack.pdb" Attributes="0" SourcePath="..\BlackJack\bin\Debug\BlackJack.pdb" SelfReg="false"/>
+    <ROW File="C.png" Component_="C.png" FileName="10C.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\10C.png" SelfReg="false"/>
+    <ROW File="D.png" Component_="C.png" FileName="10D.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\10D.png" SelfReg="false"/>
+    <ROW File="H.png" Component_="C.png" FileName="10H.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\10H.png" SelfReg="false"/>
+    <ROW File="S.png" Component_="C.png" FileName="10S.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\10S.png" SelfReg="false"/>
+    <ROW File="C.png_1" Component_="C.png" FileName="2C.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\2C.png" SelfReg="false"/>
+    <ROW File="D.png_1" Component_="C.png" FileName="2D.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\2D.png" SelfReg="false"/>
+    <ROW File="H.png_1" Component_="C.png" FileName="2H.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\2H.png" SelfReg="false"/>
+    <ROW File="S.png_1" Component_="C.png" FileName="2S.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\2S.png" SelfReg="false"/>
+    <ROW File="C.png_2" Component_="C.png" FileName="3C.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\3C.png" SelfReg="false"/>
+    <ROW File="D.png_2" Component_="C.png" FileName="3D.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\3D.png" SelfReg="false"/>
+    <ROW File="H.png_2" Component_="C.png" FileName="3H.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\3H.png" SelfReg="false"/>
+    <ROW File="S.png_2" Component_="C.png" FileName="3S.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\3S.png" SelfReg="false"/>
+    <ROW File="C.png_3" Component_="C.png" FileName="4C.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\4C.png" SelfReg="false"/>
+    <ROW File="D.png_3" Component_="C.png" FileName="4D.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\4D.png" SelfReg="false"/>
+    <ROW File="H.png_3" Component_="C.png" FileName="4H.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\4H.png" SelfReg="false"/>
+    <ROW File="S.png_3" Component_="C.png" FileName="4S.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\4S.png" SelfReg="false"/>
+    <ROW File="C.png_4" Component_="C.png" FileName="5C.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\5C.png" SelfReg="false"/>
+    <ROW File="D.png_4" Component_="C.png" FileName="5D.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\5D.png" SelfReg="false"/>
+    <ROW File="H.png_4" Component_="C.png" FileName="5H.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\5H.png" SelfReg="false"/>
+    <ROW File="S.png_4" Component_="C.png" FileName="5S.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\5S.png" SelfReg="false"/>
+    <ROW File="C.png_5" Component_="C.png" FileName="6C.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\6C.png" SelfReg="false"/>
+    <ROW File="D.png_5" Component_="C.png" FileName="6D.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\6D.png" SelfReg="false"/>
+    <ROW File="H.png_5" Component_="C.png" FileName="6H.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\6H.png" SelfReg="false"/>
+    <ROW File="S.png_5" Component_="C.png" FileName="6S.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\6S.png" SelfReg="false"/>
+    <ROW File="C.png_6" Component_="C.png" FileName="7C.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\7C.png" SelfReg="false"/>
+    <ROW File="D.png_6" Component_="C.png" FileName="7D.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\7D.png" SelfReg="false"/>
+    <ROW File="H.png_6" Component_="C.png" FileName="7H.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\7H.png" SelfReg="false"/>
+    <ROW File="S.png_6" Component_="C.png" FileName="7S.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\7S.png" SelfReg="false"/>
+    <ROW File="C.png_7" Component_="C.png" FileName="8C.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\8C.png" SelfReg="false"/>
+    <ROW File="D.png_7" Component_="C.png" FileName="8D.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\8D.png" SelfReg="false"/>
+    <ROW File="H.png_7" Component_="C.png" FileName="8H.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\8H.png" SelfReg="false"/>
+    <ROW File="S.png_7" Component_="C.png" FileName="8S.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\8S.png" SelfReg="false"/>
+    <ROW File="C.png_8" Component_="C.png" FileName="9C.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\9C.png" SelfReg="false"/>
+    <ROW File="D.png_8" Component_="C.png" FileName="9D.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\9D.png" SelfReg="false"/>
+    <ROW File="H.png_8" Component_="C.png" FileName="9H.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\9H.png" SelfReg="false"/>
+    <ROW File="S.png_8" Component_="C.png" FileName="9S.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\9S.png" SelfReg="false"/>
+    <ROW File="AC.png" Component_="C.png" FileName="AC.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\AC.png" SelfReg="false"/>
+    <ROW File="aces.png" Component_="C.png" FileName="aces.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\aces.png" SelfReg="false"/>
+    <ROW File="AD.png" Component_="C.png" FileName="AD.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\AD.png" SelfReg="false"/>
+    <ROW File="AH.png" Component_="C.png" FileName="AH.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\AH.png" SelfReg="false"/>
+    <ROW File="AS.png" Component_="C.png" FileName="AS.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\AS.png" SelfReg="false"/>
+    <ROW File="b1fv.png" Component_="C.png" FileName="b1fv.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\b1fv.png" SelfReg="false"/>
+    <ROW File="back_cards07.png" Component_="C.png" FileName="BACK_C~1.PNG|back_cards-07.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\back_cards-07.png" SelfReg="false"/>
+    <ROW File="blue_back.png" Component_="C.png" FileName="BLUE_B~1.PNG|blue_back.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\blue_back.png" SelfReg="false"/>
+    <ROW File="gray_back.png" Component_="C.png" FileName="GRAY_B~1.PNG|gray_back.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\gray_back.png" SelfReg="false"/>
+    <ROW File="green_back.png" Component_="C.png" FileName="GREEN_~1.PNG|green_back.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\green_back.png" SelfReg="false"/>
+    <ROW File="honors_spade14.png" Component_="C.png" FileName="HONORS~1.PNG|honors_spade-14.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\honors_spade-14.png" SelfReg="false"/>
+    <ROW File="honor_clubs.png" Component_="C.png" FileName="HONOR_~1.PNG|honor_clubs.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\honor_clubs.png" SelfReg="false"/>
+    <ROW File="honor_diamond.png" Component_="C.png" FileName="HONOR_~2.PNG|honor_diamond.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\honor_diamond.png" SelfReg="false"/>
+    <ROW File="honor_heart14.png" Component_="C.png" FileName="HONOR_~3.PNG|honor_heart-14.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\honor_heart-14.png" SelfReg="false"/>
+    <ROW File="JC.png" Component_="C.png" FileName="JC.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\JC.png" SelfReg="false"/>
+    <ROW File="JD.png" Component_="C.png" FileName="JD.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\JD.png" SelfReg="false"/>
+    <ROW File="JH.png" Component_="C.png" FileName="JH.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\JH.png" SelfReg="false"/>
+    <ROW File="JS.png" Component_="C.png" FileName="JS.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\JS.png" SelfReg="false"/>
+    <ROW File="KC.png" Component_="C.png" FileName="KC.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\KC.png" SelfReg="false"/>
+    <ROW File="KD.png" Component_="C.png" FileName="KD.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\KD.png" SelfReg="false"/>
+    <ROW File="KH.png" Component_="C.png" FileName="KH.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\KH.png" SelfReg="false"/>
+    <ROW File="KS.png" Component_="C.png" FileName="KS.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\KS.png" SelfReg="false"/>
+    <ROW File="purple_back.png_1" Component_="C.png" FileName="PURPLE~1.PNG|purple_back.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\purple_back.png" SelfReg="false"/>
+    <ROW File="QC.png" Component_="C.png" FileName="QC.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\QC.png" SelfReg="false"/>
+    <ROW File="QD.png" Component_="C.png" FileName="QD.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\QD.png" SelfReg="false"/>
+    <ROW File="QH.png" Component_="C.png" FileName="QH.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\QH.png" SelfReg="false"/>
+    <ROW File="QS.png" Component_="C.png" FileName="QS.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\QS.png" SelfReg="false"/>
+    <ROW File="red_back.png_1" Component_="C.png" FileName="red_back.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\red_back.png" SelfReg="false"/>
+    <ROW File="yellow_back.png" Component_="C.png" FileName="YELLOW~1.PNG|yellow_back.png" Attributes="0" SourcePath="..\BlackJack\bin\Debug\img\yellow_back.png" SelfReg="false"/>
+    <ROW File="background.jpg" Component_="background.jpg" FileName="BACKGR~1.JPG|background.jpg" Attributes="0" SourcePath="..\BlackJack\img\background.jpg" SelfReg="false"/>
+    <ROW File="C.png_9" Component_="C.png_1" FileName="10C.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\10C.png" SelfReg="false"/>
+    <ROW File="D.png_9" Component_="C.png_1" FileName="10D.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\10D.png" SelfReg="false"/>
+    <ROW File="H.png_9" Component_="C.png_1" FileName="10H.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\10H.png" SelfReg="false"/>
+    <ROW File="S.png_9" Component_="C.png_1" FileName="10S.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\10S.png" SelfReg="false"/>
+    <ROW File="C.png_10" Component_="C.png_1" FileName="2C.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\2C.png" SelfReg="false"/>
+    <ROW File="D.png_10" Component_="C.png_1" FileName="2D.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\2D.png" SelfReg="false"/>
+    <ROW File="H.png_10" Component_="C.png_1" FileName="2H.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\2H.png" SelfReg="false"/>
+    <ROW File="S.png_10" Component_="C.png_1" FileName="2S.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\2S.png" SelfReg="false"/>
+    <ROW File="C.png_11" Component_="C.png_1" FileName="3C.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\3C.png" SelfReg="false"/>
+    <ROW File="D.png_11" Component_="C.png_1" FileName="3D.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\3D.png" SelfReg="false"/>
+    <ROW File="H.png_11" Component_="C.png_1" FileName="3H.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\3H.png" SelfReg="false"/>
+    <ROW File="S.png_11" Component_="C.png_1" FileName="3S.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\3S.png" SelfReg="false"/>
+    <ROW File="C.png_12" Component_="C.png_1" FileName="4C.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\4C.png" SelfReg="false"/>
+    <ROW File="D.png_12" Component_="C.png_1" FileName="4D.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\4D.png" SelfReg="false"/>
+    <ROW File="H.png_12" Component_="C.png_1" FileName="4H.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\4H.png" SelfReg="false"/>
+    <ROW File="S.png_12" Component_="C.png_1" FileName="4S.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\4S.png" SelfReg="false"/>
+    <ROW File="C.png_13" Component_="C.png_1" FileName="5C.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\5C.png" SelfReg="false"/>
+    <ROW File="D.png_13" Component_="C.png_1" FileName="5D.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\5D.png" SelfReg="false"/>
+    <ROW File="H.png_13" Component_="C.png_1" FileName="5H.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\5H.png" SelfReg="false"/>
+    <ROW File="S.png_13" Component_="C.png_1" FileName="5S.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\5S.png" SelfReg="false"/>
+    <ROW File="C.png_14" Component_="C.png_1" FileName="6C.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\6C.png" SelfReg="false"/>
+    <ROW File="D.png_14" Component_="C.png_1" FileName="6D.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\6D.png" SelfReg="false"/>
+    <ROW File="H.png_14" Component_="C.png_1" FileName="6H.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\6H.png" SelfReg="false"/>
+    <ROW File="S.png_14" Component_="C.png_1" FileName="6S.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\6S.png" SelfReg="false"/>
+    <ROW File="C.png_15" Component_="C.png_1" FileName="7C.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\7C.png" SelfReg="false"/>
+    <ROW File="D.png_15" Component_="C.png_1" FileName="7D.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\7D.png" SelfReg="false"/>
+    <ROW File="H.png_15" Component_="C.png_1" FileName="7H.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\7H.png" SelfReg="false"/>
+    <ROW File="S.png_15" Component_="C.png_1" FileName="7S.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\7S.png" SelfReg="false"/>
+    <ROW File="C.png_16" Component_="C.png_1" FileName="8C.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\8C.png" SelfReg="false"/>
+    <ROW File="D.png_16" Component_="C.png_1" FileName="8D.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\8D.png" SelfReg="false"/>
+    <ROW File="H.png_16" Component_="C.png_1" FileName="8H.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\8H.png" SelfReg="false"/>
+    <ROW File="S.png_16" Component_="C.png_1" FileName="8S.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\8S.png" SelfReg="false"/>
+    <ROW File="C.png_17" Component_="C.png_1" FileName="9C.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\9C.png" SelfReg="false"/>
+    <ROW File="D.png_17" Component_="C.png_1" FileName="9D.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\9D.png" SelfReg="false"/>
+    <ROW File="H.png_17" Component_="C.png_1" FileName="9H.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\9H.png" SelfReg="false"/>
+    <ROW File="S.png_17" Component_="C.png_1" FileName="9S.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\9S.png" SelfReg="false"/>
+    <ROW File="AC.png_1" Component_="C.png_1" FileName="AC.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\AC.png" SelfReg="false"/>
+    <ROW File="aces.ico" Component_="C.png_1" FileName="aces.ico" Attributes="0" SourcePath="..\BlackJack\img\cartes\aces.ico" SelfReg="false"/>
+    <ROW File="aces.png_1" Component_="C.png_1" FileName="aces.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\aces.png" SelfReg="false"/>
+    <ROW File="AD.png_1" Component_="C.png_1" FileName="AD.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\AD.png" SelfReg="false"/>
+    <ROW File="AH.png_1" Component_="C.png_1" FileName="AH.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\AH.png" SelfReg="false"/>
+    <ROW File="AS.png_1" Component_="C.png_1" FileName="AS.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\AS.png" SelfReg="false"/>
+    <ROW File="b1fv.png_1" Component_="C.png_1" FileName="b1fv.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\b1fv.png" SelfReg="false"/>
+    <ROW File="back_cards07.png_1" Component_="C.png_1" FileName="BACK_C~1.PNG|back_cards-07.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\back_cards-07.png" SelfReg="false"/>
+    <ROW File="blue_back.png_1" Component_="C.png_1" FileName="BLUE_B~1.PNG|blue_back.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\blue_back.png" SelfReg="false"/>
+    <ROW File="gray_back.png_1" Component_="C.png_1" FileName="GRAY_B~1.PNG|gray_back.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\gray_back.png" SelfReg="false"/>
+    <ROW File="greenfelt.jpg" Component_="C.png_1" FileName="GREENF~1.JPG|greenfelt.jpg" Attributes="0" SourcePath="..\BlackJack\img\cartes\greenfelt.jpg" SelfReg="false"/>
+    <ROW File="green_back.png_1" Component_="C.png_1" FileName="GREEN_~1.PNG|green_back.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\green_back.png" SelfReg="false"/>
+    <ROW File="honors_spade14.png_1" Component_="C.png_1" FileName="HONORS~1.PNG|honors_spade-14.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\honors_spade-14.png" SelfReg="false"/>
+    <ROW File="honor_clubs.png_1" Component_="C.png_1" FileName="HONOR_~1.PNG|honor_clubs.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\honor_clubs.png" SelfReg="false"/>
+    <ROW File="honor_diamond.png_1" Component_="C.png_1" FileName="HONOR_~2.PNG|honor_diamond.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\honor_diamond.png" SelfReg="false"/>
+    <ROW File="honor_heart14.png_1" Component_="C.png_1" FileName="HONOR_~3.PNG|honor_heart-14.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\honor_heart-14.png" SelfReg="false"/>
+    <ROW File="JC.png_1" Component_="C.png_1" FileName="JC.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\JC.png" SelfReg="false"/>
+    <ROW File="JD.png_1" Component_="C.png_1" FileName="JD.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\JD.png" SelfReg="false"/>
+    <ROW File="JH.png_1" Component_="C.png_1" FileName="JH.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\JH.png" SelfReg="false"/>
+    <ROW File="JS.png_1" Component_="C.png_1" FileName="JS.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\JS.png" SelfReg="false"/>
+    <ROW File="KC.png_1" Component_="C.png_1" FileName="KC.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\KC.png" SelfReg="false"/>
+    <ROW File="KD.png_1" Component_="C.png_1" FileName="KD.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\KD.png" SelfReg="false"/>
+    <ROW File="KH.png_1" Component_="C.png_1" FileName="KH.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\KH.png" SelfReg="false"/>
+    <ROW File="KS.png_1" Component_="C.png_1" FileName="KS.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\KS.png" SelfReg="false"/>
+    <ROW File="purple_back.png_2" Component_="C.png_1" FileName="PURPLE~1.PNG|purple_back.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\purple_back.png" SelfReg="false"/>
+    <ROW File="QC.png_1" Component_="C.png_1" FileName="QC.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\QC.png" SelfReg="false"/>
+    <ROW File="QD.png_1" Component_="C.png_1" FileName="QD.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\QD.png" SelfReg="false"/>
+    <ROW File="QH.png_1" Component_="C.png_1" FileName="QH.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\QH.png" SelfReg="false"/>
+    <ROW File="QS.png_1" Component_="C.png_1" FileName="QS.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\QS.png" SelfReg="false"/>
+    <ROW File="red_back.png_2" Component_="C.png_1" FileName="red_back.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\red_back.png" SelfReg="false"/>
+    <ROW File="yellow_back.png_1" Component_="C.png_1" FileName="YELLOW~1.PNG|yellow_back.png" Attributes="0" SourcePath="..\BlackJack\img\cartes\yellow_back.png" SelfReg="false"/>
+    <ROW File="bleu.png" Component_="bleu.png" FileName="bleu.png" Attributes="0" SourcePath="..\BlackJack\img\fond cartes\bleu.png" SelfReg="false"/>
+    <ROW File="jaune.png" Component_="bleu.png" FileName="jaune.png" Attributes="0" SourcePath="..\BlackJack\img\fond cartes\jaune.png" SelfReg="false"/>
+    <ROW File="noir.png" Component_="bleu.png" FileName="noir.png" Attributes="0" SourcePath="..\BlackJack\img\fond cartes\noir.png" SelfReg="false"/>
+    <ROW File="orange.png" Component_="bleu.png" FileName="orange.png" Attributes="0" SourcePath="..\BlackJack\img\fond cartes\orange.png" SelfReg="false"/>
+    <ROW File="rouge.png" Component_="bleu.png" FileName="rouge.png" Attributes="0" SourcePath="..\BlackJack\img\fond cartes\rouge.png" SelfReg="false"/>
+    <ROW File="vert.png" Component_="bleu.png" FileName="vert.png" Attributes="0" SourcePath="..\BlackJack\img\fond cartes\vert.png" SelfReg="false"/>
+    <ROW File="violet2.png" Component_="bleu.png" FileName="VIOLET~1.PNG|violet (2).png" Attributes="0" SourcePath="..\BlackJack\img\fond cartes\violet (2).png" SelfReg="false"/>
+    <ROW File="violet.png" Component_="bleu.png" FileName="violet.png" Attributes="0" SourcePath="..\BlackJack\img\fond cartes\violet.png" SelfReg="false"/>
+    <ROW File="red_bg.jpg" Component_="background.jpg" FileName="red_bg.jpg" Attributes="0" SourcePath="..\BlackJack\img\red_bg.jpg" SelfReg="false"/>
+    <ROW File="BlackJack.AboutBox1.resources" Component_="BlackJack.AboutBox1.resources" FileName="BLACKJ~1.RES|BlackJack.AboutBox1.resources" Attributes="0" SourcePath="..\BlackJack\obj\Debug\BlackJack.AboutBox1.resources" SelfReg="false"/>
+    <ROW File="BlackJack.csproj.CoreCompileInputs.cache" Component_="BlackJack.AboutBox1.resources" FileName="BLACKJ~1.CAC|BlackJack.csproj.CoreCompileInputs.cache" Attributes="0" SourcePath="..\BlackJack\obj\Debug\BlackJack.csproj.CoreCompileInputs.cache" SelfReg="false"/>
+    <ROW File="BlackJack.csproj.FileListAbsolute.txt" Component_="BlackJack.AboutBox1.resources" FileName="BLACKJ~1.TXT|BlackJack.csproj.FileListAbsolute.txt" Attributes="0" SourcePath="..\BlackJack\obj\Debug\BlackJack.csproj.FileListAbsolute.txt" SelfReg="false"/>
+    <ROW File="BlackJack.csproj.GenerateResource.cache" Component_="BlackJack.AboutBox1.resources" FileName="BLACKJ~2.CAC|BlackJack.csproj.GenerateResource.cache" Attributes="0" SourcePath="..\BlackJack\obj\Debug\BlackJack.csproj.GenerateResource.cache" SelfReg="false"/>
+    <ROW File="BlackJack.csprojAssemblyReference.cache" Component_="BlackJack.AboutBox1.resources" FileName="BLACKJ~3.CAC|BlackJack.csprojAssemblyReference.cache" Attributes="0" SourcePath="..\BlackJack\obj\Debug\BlackJack.csprojAssemblyReference.cache" SelfReg="false"/>
+    <ROW File="BlackJack.exe_1" Component_="BlackJack.exe_1" FileName="BLACKJ~1.EXE|BlackJack.exe" Attributes="0" SourcePath="..\BlackJack\obj\Debug\BlackJack.exe" SelfReg="false" DigSign="true"/>
+    <ROW File="BlackJack.FormBlackJack.resources" Component_="BlackJack.AboutBox1.resources" FileName="BLACKJ~2.RES|BlackJack.FormBlackJack.resources" Attributes="0" SourcePath="..\BlackJack\obj\Debug\BlackJack.FormBlackJack.resources" SelfReg="false"/>
+    <ROW File="BlackJack.pdb_1" Component_="BlackJack.exe_1" FileName="BLACKJ~1.PDB|BlackJack.pdb" Attributes="0" SourcePath="..\BlackJack\obj\Debug\BlackJack.pdb" SelfReg="false"/>
+    <ROW File="BlackJack.Properties.Resources.resources" Component_="BlackJack.AboutBox1.resources" FileName="BLACKJ~3.RES|BlackJack.Properties.Resources.resources" Attributes="0" SourcePath="..\BlackJack\obj\Debug\BlackJack.Properties.Resources.resources" SelfReg="false"/>
+    <ROW File="DesignTimeResolveAssemblyReferences.cache" Component_="BlackJack.AboutBox1.resources" FileName="DESIGN~1.CAC|DesignTimeResolveAssemblyReferences.cache" Attributes="0" SourcePath="..\BlackJack\obj\Debug\DesignTimeResolveAssemblyReferences.cache" SelfReg="false"/>
+    <ROW File="DesignTimeResolveAssemblyReferencesInput.cache" Component_="BlackJack.AboutBox1.resources" FileName="DESIGN~2.CAC|DesignTimeResolveAssemblyReferencesInput.cache" Attributes="0" SourcePath="..\BlackJack\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" SelfReg="false"/>
+    <ROW File="Main1.Designer.cs.dll" Component_="Main1.Designer.cs.dll" FileName="MAIN1D~1.DLL|Main1.Designer.cs.dll" Attributes="0" SourcePath="..\BlackJack\obj\Debug\TempPE\Main1.Designer.cs.dll" SelfReg="false"/>
+    <ROW File="Properties.Resources.Designer.cs.dll" Component_="Properties.Resources.Designer.cs.dll" FileName="PROPER~1.DLL|Properties.Resources.Designer.cs.dll" Attributes="0" SourcePath="..\BlackJack\obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" SelfReg="false"/>
+    <ROW File="AssemblyInfo.cs" Component_="AssemblyInfo.cs" FileName="ASSEMB~1.CS|AssemblyInfo.cs" Attributes="0" SourcePath="..\BlackJack\Properties\AssemblyInfo.cs" SelfReg="false"/>
+    <ROW File="Resources.Designer.cs" Component_="AssemblyInfo.cs" FileName="RESOUR~1.CS|Resources.Designer.cs" Attributes="0" SourcePath="..\BlackJack\Properties\Resources.Designer.cs" SelfReg="false"/>
+    <ROW File="Resources.resx" Component_="AssemblyInfo.cs" FileName="RESOUR~1.RES|Resources.resx" Attributes="0" SourcePath="..\BlackJack\Properties\Resources.resx" SelfReg="false"/>
+    <ROW File="Settings.Designer.cs" Component_="AssemblyInfo.cs" FileName="SETTIN~1.CS|Settings.Designer.cs" Attributes="0" SourcePath="..\BlackJack\Properties\Settings.Designer.cs" SelfReg="false"/>
+    <ROW File="Settings.settings" Component_="AssemblyInfo.cs" FileName="SETTIN~1.SET|Settings.settings" Attributes="0" SourcePath="..\BlackJack\Properties\Settings.settings" SelfReg="false"/>
+    <ROW File="AboutBox1.cs" Component_="Program.cs" FileName="ABOUTB~1.CS|AboutBox1.cs" Attributes="0" SourcePath="..\BlackJack\AboutBox1.cs" SelfReg="false"/>
+    <ROW File="AboutBox1.Designer.cs" Component_="Program.cs" FileName="ABOUTB~2.CS|AboutBox1.Designer.cs" Attributes="0" SourcePath="..\BlackJack\AboutBox1.Designer.cs" SelfReg="false"/>
+    <ROW File="AboutBox1.resx" Component_="Program.cs" FileName="ABOUTB~1.RES|AboutBox1.resx" Attributes="0" SourcePath="..\BlackJack\AboutBox1.resx" SelfReg="false"/>
+    <ROW File="App.config" Component_="Program.cs" FileName="APP~1.CON|App.config" Attributes="0" SourcePath="..\BlackJack\App.config" SelfReg="false"/>
+    <ROW File="BlackJack.csproj" Component_="Program.cs" FileName="BLACKJ~1.CSP|BlackJack.csproj" Attributes="0" SourcePath="..\BlackJack\BlackJack.csproj" SelfReg="false"/>
+    <ROW File="blue_back.png_2" Component_="Program.cs" FileName="BLUE_B~1.PNG|blue_back.png" Attributes="0" SourcePath="..\BlackJack\blue_back.png" SelfReg="false"/>
+    <ROW File="Cartes.cs" Component_="Program.cs" FileName="Cartes.cs" Attributes="0" SourcePath="..\BlackJack\Cartes.cs" SelfReg="false"/>
+    <ROW File="gray_back.png_2" Component_="Program.cs" FileName="GRAY_B~1.PNG|gray_back.png" Attributes="0" SourcePath="..\BlackJack\gray_back.png" SelfReg="false"/>
+    <ROW File="green_back.png_2" Component_="Program.cs" FileName="GREEN_~1.PNG|green_back.png" Attributes="0" SourcePath="..\BlackJack\green_back.png" SelfReg="false"/>
+    <ROW File="Main.cs" Component_="Program.cs" FileName="Main.cs" Attributes="0" SourcePath="..\BlackJack\Main.cs" SelfReg="false"/>
+    <ROW File="Main.Designer.cs" Component_="Program.cs" FileName="MAINDE~1.CS|Main.Designer.cs" Attributes="0" SourcePath="..\BlackJack\Main.Designer.cs" SelfReg="false"/>
+    <ROW File="Main.resx" Component_="Program.cs" FileName="MAIN~1.RES|Main.resx" Attributes="0" SourcePath="..\BlackJack\Main.resx" SelfReg="false"/>
+    <ROW File="Main1.Designer.cs" Component_="Program.cs" FileName="MAIN1D~1.CS|Main1.Designer.cs" Attributes="0" SourcePath="..\BlackJack\Main1.Designer.cs" SelfReg="false"/>
+    <ROW File="Old.cs" Component_="Program.cs" FileName="Old.cs" Attributes="0" SourcePath="..\BlackJack\Old.cs" SelfReg="false"/>
+    <ROW File="BlackJack.exe_2" Component_="BlackJack_PrimaryOutput" FileName="BLACKJ~2.EXE|[|AI_PROPPATH_FILENAME_PERBUILD_BlackJack.exe_2]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_BlackJack.exe_2&gt;" SelfReg="false" DigSign="true"/>
+    <ROW File="BlackJack.exe.config_1" Component_="BlackJack_PrimaryOutput" FileName="BLACKJ~2.CON|[|AI_PROPPATH_FILENAME_PERBUILD_BlackJack.exe.config_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_BlackJack.exe.config_1&gt;" SelfReg="false"/>
+    <ROW File="BlackJack.pdb_2" Component_="BlackJack_SymbolsOutput" FileName="BLACKJ~2.PDB|[|AI_PROPPATH_FILENAME_PERBUILD_BlackJack.pdb_2]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_BlackJack.pdb_2&gt;" SelfReg="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.AppPathsComponent">
+    <ROW Name="AI_APPPATH_PERBUILD_BlackJack.exe.config_1" Path="[|AI_PROPPATH_DIR_PERBUILD_BlackJack.exe.config_1]\[|AI_PROPPATH_FILENAME_PERBUILD_BlackJack.exe.config_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_BlackJack.exe_2" Path="[|AI_PROPPATH_DIR_PERBUILD_BlackJack.exe_2]\[|AI_PROPPATH_FILENAME_PERBUILD_BlackJack.exe_2]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_BlackJack.pdb_2" Path="[|AI_PROPPATH_DIR_PERBUILD_BlackJack.pdb_2]\[|AI_PROPPATH_FILENAME_PERBUILD_BlackJack.pdb_2]" Type="2" Content="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
+    <ROW BootstrOptKey="GlobalOptions" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
+    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="0" Languages="en" InstallationType="4" UseLargeSchema="true"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
+    <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_en.ail"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
+    <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
+    <ROW Fragment="FolderDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\FolderDlg.aip"/>
+    <ROW Fragment="MaintenanceTypeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceTypeDlg.aip"/>
+    <ROW Fragment="MaintenanceWelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceWelcomeDlg.aip"/>
+    <ROW Fragment="SequenceDialogs.aip" Path="&lt;AI_THEMES&gt;classic\fragments\SequenceDialogs.aip"/>
+    <ROW Fragment="Sequences.aip" Path="&lt;AI_FRAGS&gt;Sequences.aip"/>
+    <ROW Fragment="StaticUIStrings.aip" Path="&lt;AI_FRAGS&gt;StaticUIStrings.aip"/>
+    <ROW Fragment="UI.aip" Path="&lt;AI_THEMES&gt;classic\fragments\UI.aip"/>
+    <ROW Fragment="Validation.aip" Path="&lt;AI_FRAGS&gt;Validation.aip"/>
+    <ROW Fragment="VerifyRemoveDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRemoveDlg.aip"/>
+    <ROW Fragment="VerifyRepairDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRepairDlg.aip"/>
+    <ROW Fragment="WelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\WelcomeDlg.aip"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
+    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="FolderDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control_="Next" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="99"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_MAINT" Ordering="198"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="202"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="197"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_MAINT" Ordering="101"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="ChangeButton" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="501"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceWelcomeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RemoveButton" Event="NewDialog" Argument="VerifyRemoveDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RepairButton" Event="NewDialog" Argument="VerifyRepairDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="1"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Repair" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="399" Options="1"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Remove" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="299" Options="1"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_PATCH" Ordering="201"/>
+    <ROW Dialog_="ResumeDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_RESUME" Ordering="299"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_PATCH" Ordering="199"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="203"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
+    <ROW Directory_="APPDIR" Component_="APPDIR" ManualDelete="true"/>
+    <ROW Directory_="SHORTCUTDIR" Component_="SHORTCUTDIR" ManualDelete="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
+    <ROW Action="AI_DpiContentScale" Type="1" Source="aicustact.dll" Target="DpiContentScale"/>
+    <ROW Action="AI_EnableDebugLog" Type="321" Source="aicustact.dll" Target="EnableDebugLog"/>
+    <ROW Action="AI_InstallModeCheck" Type="1" Source="aicustact.dll" Target="UpdateInstallMode" WithoutSeq="true"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
+    <ROW Action="AI_RESTORE_LOCATION" Type="65" Source="aicustact.dll" Target="RestoreLocation"/>
+    <ROW Action="AI_ResolveKnownFolders" Type="1" Source="aicustact.dll" Target="AI_ResolveKnownFolders"/>
+    <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
+    <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]" MultiBuildTarget="DefaultBuild:[BlackJack_Dir][ProgramMenuFolder][ProductName]"/>
+    <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatCompsComponent">
+    <ROW Feature_="MainFeature" Component_="APPDIR"/>
+    <ROW Feature_="MainFeature" Component_="ProductInformation"/>
+    <ROW Feature_="MainFeature" Component_="Program.cs"/>
+    <ROW Feature_="MainFeature" Component_="BlackJack.exe"/>
+    <ROW Feature_="MainFeature" Component_="BlackJack.exe.config"/>
+    <ROW Feature_="MainFeature" Component_="C.png"/>
+    <ROW Feature_="MainFeature" Component_="background.jpg"/>
+    <ROW Feature_="MainFeature" Component_="C.png_1"/>
+    <ROW Feature_="MainFeature" Component_="bleu.png"/>
+    <ROW Feature_="MainFeature" Component_="BlackJack.AboutBox1.resources"/>
+    <ROW Feature_="MainFeature" Component_="BlackJack.exe_1"/>
+    <ROW Feature_="MainFeature" Component_="Main1.Designer.cs.dll"/>
+    <ROW Feature_="MainFeature" Component_="Properties.Resources.Designer.cs.dll"/>
+    <ROW Feature_="MainFeature" Component_="AssemblyInfo.cs"/>
+    <ROW Feature_="MainFeature" Component_="BlackJack_PrimaryOutput"/>
+    <ROW Feature_="MainFeature" Component_="SHORTCUTDIR"/>
+    <ROW Feature_="MainFeature" Component_="BlackJack_SymbolsOutput"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
+    <ROW Name="aces.exe" SourcePath="..\BlackJack\img\cartes\aces.ico" Index="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_STORE_LOCATION" Condition="(Not Installed) OR REINSTALL" Sequence="1501"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1399"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="53"/>
+    <ROW Action="AI_DpiContentScale" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
+    <ROW Condition="((VersionNT &lt;&gt; 501) AND (VersionNT &lt;&gt; 502))" Description="[ProductName] cannot be installed on [WindowsTypeNT5XDisplay]." DescriptionLocId="AI.LaunchCondition.NoNT5X" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 400)" Description="[ProductName] cannot be installed on [WindowsTypeNT40Display]." DescriptionLocId="AI.LaunchCondition.NoNT40" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 500)" Description="[ProductName] cannot be installed on [WindowsTypeNT50Display]." DescriptionLocId="AI.LaunchCondition.NoNT50" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="VersionNT" Description="[ProductName] cannot be installed on [WindowsType9XDisplay]." DescriptionLocId="AI.LaunchCondition.No9X" IsPredefined="true" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
+    <ROW Registry="Path" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Path" Value="[APPDIR]" Component_="ProductInformation"/>
+    <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="BlackJack" Directory_="SHORTCUTDIR" Name="BLACKJ~1|BlackJack" Component_="BlackJack_PrimaryOutput" Target="[#BlackJack.exe_2]" Hotkey="0" IconIndex="0" ShowCmd="1"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
+    <ATTRIBUTE name="UsedTheme" value="classic"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="0.0.1" VersionMax="[|ProductVersion]" Attributes="257" ActionProperty="OLDPRODUCTS"/>
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.VsProjectComponent">
+    <ROW ProjectId="{8d7d5852-74b5-4593-8440-2a201cecbd15}" ProjectName="BlackJack" OutputGroup="PrimaryOutput" OutputFile="BlackJack.exe_2" OutputFileShortcut="BlackJack"/>
+    <ROW ProjectId="{8d7d5852-74b5-4593-8440-2a201cecbd15}" ProjectName="BlackJack" OutputGroup="PrimaryOutput" OutputFile="BlackJack.exe.config_1"/>
+    <ROW ProjectId="{8d7d5852-74b5-4593-8440-2a201cecbd15}" ProjectName="BlackJack" OutputGroup="SymbolsOutput" OutputFile="BlackJack.pdb_2"/>
+  </COMPONENT>
+</DOCUMENT>
