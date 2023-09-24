@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BlackJack.Code;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,6 +30,9 @@ namespace BlackJack
 
         #endregion
 
+        #region Couleurs
+        bool noir, bleu, orange, rouge, violet, vert;
+        #endregion
         Random random = new Random();
 
         List<int> CartesUtilisees = new List<int>();
@@ -137,6 +141,11 @@ namespace BlackJack
          pos2 = 857; 123
          =      28; 16;
          */
+
+        private void SetResource(Properties.Resources resources)
+        {
+            
+        }
 
         private void resteToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -266,58 +275,109 @@ namespace BlackJack
             }
             ConditionsScoreCarte();
         }
-
+        /// <summary>
+        /// Commence une nouvelle partie
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void nouvellePartieToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(Distr == true)
+            if(Distr)
             {
                 Abandon();  
             }
 
-            else if(Distr == false && Fin == true)
+            else if(Distr == false && Fin)
             {
                 return;
             }
         }
 
-        private void rougeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ChangeCardColor(Properties.Resources.rouge, ActiveForm);
-        }
-
-        private void toolStripTextBox1_Click(object sender, EventArgs e)
+        private void eventLog1_EntryWritten(object sender, System.Diagnostics.EntryWrittenEventArgs e)
         {
 
         }
 
         private void bleuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ChangeCardColor(Properties.Resources.bleu, ActiveForm);
-        }
+            violet = false;
+            vert = false;
+            bleu = true;
+            orange = false;
+            rouge = false;
+            noir = false;
+            pictureBoxJoueur.Image = Properties.Resources.bleu;
+            pictureBoxJoueur2.Image = Properties.Resources.bleu;
+            pictureBoxJoueur3.Image = Properties.Resources.bleu;
+            pictureBoxCasino.Image = Properties.Resources.bleu;
+            pictureBoxCasino2.Image = Properties.Resources.bleu;
+            pictureBoxCasino4.Image = Properties.Resources.bleu;
+    }
 
         private void rougeToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            ChangeCardColor(Properties.Resources.red_bg, ActiveForm);
+            FormBlackJack fbj = new FormBlackJack();
+            Image bg = Properties.Resources.red_bg;
+            fbj.BackgroundImage = bg;
         }
 
         private void orangeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ChangeCardColor(Properties.Resources.orange, ActiveForm);
+            violet = false;
+            vert = false;
+            orange = true;
+            bleu = false;
+            noir = false;
+            rouge = false;
+            pictureBoxJoueur.Image = Properties.Resources.orange;
+            pictureBoxJoueur2.Image = Properties.Resources.orange;
+            pictureBoxJoueur3.Image = Properties.Resources.orange;
+            pictureBoxCasino.Image = Properties.Resources.orange;
+            pictureBoxCasino2.Image = Properties.Resources.orange;
+            pictureBoxCasino4.Image = Properties.Resources.orange;
         }
 
         private void noirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ChangeCardColor(Properties.Resources.noir, ActiveForm);
+            violet = false;
+            vert = false;
+            noir = true;
+            rouge = false;
+            orange = false;
+            bleu = false;
+            CardActions.ChangeCardColor(Properties.Resources.noir, ActiveForm);
         }
 
         private void violetToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ChangeCardColor(Properties.Resources.violet, ActiveForm);
+            violet = true;
+            vert = false;
+            noir = false;
+            rouge = false;
+            orange = false;
+            bleu = false;
+            pictureBoxJoueur.Image = Properties.Resources.violet;
+            pictureBoxJoueur2.Image = Properties.Resources.violet;
+            pictureBoxJoueur3.Image = Properties.Resources.violet;
+            pictureBoxCasino.Image = Properties.Resources.violet;
+            pictureBoxCasino2.Image = Properties.Resources.violet;
+            pictureBoxCasino4.Image = Properties.Resources.violet;
         }
 
         private void vertToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ChangeCardColor(Properties.Resources.vert, ActiveForm);
+            violet = false;
+            vert = true;
+            noir = false;
+            rouge = false;
+            orange = false;
+            bleu = false;
+            pictureBoxJoueur.Image = Properties.Resources.vert;
+            pictureBoxJoueur2.Image = Properties.Resources.vert;
+            pictureBoxJoueur3.Image = Properties.Resources.vert;
+            pictureBoxCasino.Image = Properties.Resources.vert;
+            pictureBoxCasino2.Image = Properties.Resources.vert;
+            pictureBoxCasino4.Image = Properties.Resources.vert;
         }
     }
 }

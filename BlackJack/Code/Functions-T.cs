@@ -1,9 +1,15 @@
-﻿using System;
-using System.Drawing;
-using System.Windows.Forms;
+﻿using BlackJack.Code;
+using System;
 using System.Collections.Generic;
-using BlackJack;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BlackJack
 {
@@ -222,7 +228,7 @@ namespace BlackJack
                 Reinitialiser();
             }
 
-            else { return; }
+            else return;
         }
         private void ArgentAbandon()
         {
@@ -235,32 +241,43 @@ namespace BlackJack
         #endregion
         private void aProposToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AboutBox1 ab = new AboutBox1();
-            ab.Show();
-        }
-
-        /// <summary>
-        /// Evènement lors du changement de la couleur des cartes
-        /// </summary>
-        /// <param name="bitmap"></param>
-        /// <param name="currentForm"></param>
-        public static void ChangeCardColor(Bitmap bitmap, Form currentForm)
-        {
-            //gets all pictureboxes in the form
-            var pictureboxes = currentForm.Controls.OfType<PictureBox>();
-            foreach (var item in pictureboxes)
+            using (AboutBox1 ab = new AboutBox1())
             {
-                item.Image = bitmap;
-            }
+                ab.Show();
+            };  
         }
 
         private void InitCartes()
         {
-            Image Arriere = Properties.Resources.b1fv;
-            pictureBoxJoueur.Image = Arriere;
-            pictureBoxJoueur2.Image = Arriere;
-            pictureBoxCasino.Image = Arriere;
-            pictureBoxCasino2.Image = Arriere;
+            //Cols();
+            if (noir)
+            {
+                CardActions.ChangeCardColor(Properties.Resources.noir, ActiveForm);
+            }
+            else if (bleu)
+            {
+                CardActions.ChangeCardColor(Properties.Resources.bleu, ActiveForm);
+            }
+            else if (orange)
+            {
+                CardActions.ChangeCardColor(Properties.Resources.orange, ActiveForm);
+            }
+            else if (rouge)
+            {
+                CardActions.ChangeCardColor(Properties.Resources.rouge, ActiveForm);
+            }
+            else if (vert)
+            {
+                CardActions.ChangeCardColor(Properties.Resources.vert, ActiveForm);
+            }
+            else if (violet)
+            {
+                CardActions.ChangeCardColor(Properties.Resources.violet, ActiveForm);
+            }
+            else
+            {
+                CardActions.ChangeCardColor(Properties.Resources.b1fv, ActiveForm);
+            }
         }
 
         private void Commencer()
