@@ -16,9 +16,9 @@ namespace BlackJack
     {
         private void FormBlackJack_Load(object sender, EventArgs e)
         {
-            lblBal.Text = Def + Argent;
-            lblJoueur.Text = JoueurTX + sommejoueur;
-            lblTxCasino.Text = CasinoTX + sommecasino;
+            lblBal.Text = Def + Money;
+            lblJoueur.Text = JoueurTX + PlayerSum;
+            lblTxCasino.Text = CasinoTX + CasinoSum;
             InitCartes();
 
             Fin = true;

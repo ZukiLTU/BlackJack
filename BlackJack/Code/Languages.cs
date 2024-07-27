@@ -14,12 +14,6 @@ namespace BlackJack
 {
     public partial class FormBlackJack : Form
     {
-        enum Langs
-        {
-            LITHUANIAN,
-            ENGLISH,
-            FRENCH
-        }
         public bool Lietuviu = false;
         public bool Francais = true;
         public bool English = false;
@@ -36,10 +30,10 @@ namespace BlackJack
             resteToolStripMenuItem.Text = "Baigti paskirstyti";
             paramètresToolStripMenuItem.Text = "Nustatymai";
 
-            lblBal.Text = "Pinigai :" + Argent;
+            lblBal.Text = "Pinigai :" + Money;
             label1.Text = "Suma :";
-            lblTxCasino.Text = "Kazino : " + sommecasino;
-            lblJoueur.Text = "Žaidėjas :" + sommejoueur;
+            lblTxCasino.Text = "Kazino : " + CasinoSum;
+            lblJoueur.Text = "Žaidėjas :" + PlayerSum;
             aProposToolStripMenuItem.Text = "Apie";
             cartesToolStripMenuItem.Text = "Kortą";
         }
@@ -56,10 +50,10 @@ namespace BlackJack
             resteToolStripMenuItem.Text = "Baigti paskirstyti";
             paramètresToolStripMenuItem.Text = "Settings";
 
-            lblBal.Text = "Money :" + Argent;
+            lblBal.Text = "Money :" + Money;
             label1.Text = "Sum :";
-            lblTxCasino.Text = "Casino : " + sommecasino;
-            lblJoueur.Text = "Player :" + sommejoueur;
+            lblTxCasino.Text = "Casino : " + CasinoSum;
+            lblJoueur.Text = "Player :" + PlayerSum;
             aProposToolStripMenuItem.Text = "About";
             cartesToolStripMenuItem.Text = "Card";
         }

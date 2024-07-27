@@ -52,7 +52,11 @@
     <Compile Include="AboutBox1.Designer.cs">
       <DependentUpon>AboutBox1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Code\Cartes.cs" />
+    <Compile Include="Code\Actions\GameActions\BlackjackAction.cs" />
+    <Compile Include="Code\Actions\GameActions\ToolbarActions.cs" />
+    <Compile Include="Code\Actions\IAction.cs" />
+    <Compile Include="Code\Actions\LanguageAction\TranslationActions.cs" />
+    <Compile Include="Code\Cards\Card.cs" />
     <Compile Include="Code\ChangeLang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +67,11 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Code\SQL\SQLSettings.cs" />
+    <Compile Include="Code\States\BankruptcyState.cs" />
+    <Compile Include="Code\States\BaseState.cs" />
+    <Compile Include="Code\States\DefeatState.cs" />
+    <Compile Include="Code\States\TieState.cs" />
+    <Compile Include="Code\States\VictoryState.cs" />
     <Compile Include="Load.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,8 +94,22 @@
     <Compile Include="Scoreboard.Designer.cs">
       <DependentUpon>Scoreboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Translations\AppTranslations.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppTranslations.resx</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AboutBox1.resx">
       <DependentUpon>AboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.en.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.fr.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.lt.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -97,6 +120,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Translations\AppTranslations.fr.resx" />
+    <EmbeddedResource Include="Translations\AppTranslations.lt.resx" />
+    <EmbeddedResource Include="Translations\AppTranslations.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppTranslations.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

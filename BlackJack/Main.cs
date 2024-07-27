@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -9,18 +10,26 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.ComponentModel.Com2Interop;
+using BlackJack.Card;
+using BlackJack.Code.Actions.GameActions;
 
 namespace BlackJack
 {
     public partial class FormBlackJack : Form
     {
         #region valeurs
-        int sommejoueur = 0;
-        int sommecasino = 0;
-        int Argent = 50;
-        int Mise;
+        public int PlayerSum { get; set; }
+        public int CasinoSum { get; set; }
+        public int Money { get; set; } = 50;
+        public int bet;
         public bool Fin, Distr;
+        public List<PictureBox> PlayerPictureBoxes { get; set; } = new List<PictureBox>();
+        public List<PictureBox> CasinoPictureBoxes { get; set; } = new List<PictureBox>();
+
         #endregion
+
+        private BlackjackAction BlackjackAction { get; set; }
 
         #region texte
         string Def = "Crédits :";
@@ -29,109 +38,96 @@ namespace BlackJack
 
         #endregion
 
-        Random random = new Random();
-
-        List<int> CartesUtilisees = new List<int>();
-
-        List<Cartes>ListeCarteJoueur = new List<Cartes>()
-        {
-            new Cartes() { Valeur  = 0, Nom = "null", Image = "null" }
-        };
-
-        List<Cartes> ListeCarteCasino = new List<Cartes>()
-        {
-            new Cartes() { Valeur  = 0, Nom = "null", Image = "null" }
-        };
-
-        #region Arriere
-        List<Cartes> arriere = new List<Cartes>()
-        {
-            new Cartes{Valeur = 0, Nom = "Arrière", Image = "C:\\Users\\User\\Desktop\\Dev\\C#\\BlackJack\\BlackJack\\img\\cartes\\gray_back.png" }
-        };
-        #endregion
+        private Random random = new Random();
+        List<int> UsedCards { get; set; } = new List<int>();
+        List<Cards> UserCards { get; set; } = new List<Cards>();
+        List<Cards> CasinoCards { get; set; } = new List<Cards>();
 
         #region 52Cartes
 
-        List<Cartes> jeu = new List<Cartes>()
+        List<Cards> allCards = new List<Cards>()
         {
             #region Coeurs //Liste des cartes de coeur
 
-            new Cartes() { Valeur  = 2, Nom = "2 de coeur", Image = Environment.CurrentDirectory + "\\img\\2H.png"},
-            new Cartes() { Valeur  = 3, Nom = "3 de coeur", Image = Environment.CurrentDirectory + "\\img\\3H.png"},
-            new Cartes() { Valeur  = 4, Nom = "4 de coeur", Image =Environment.CurrentDirectory + "\\img\\4H.png"},
-            new Cartes() { Valeur  = 5, Nom = "5 de coeur", Image =Environment.CurrentDirectory + "\\img\\5H.png"},
-            new Cartes() { Valeur  = 6, Nom = "6 de coeur", Image =Environment.CurrentDirectory + "\\img\\6H.png"},
-            new Cartes() { Valeur  = 7, Nom = "7 de coeur", Image =Environment.CurrentDirectory + "\\img\\7H.png"},
-            new Cartes() { Valeur  = 8, Nom = "8 de coeur", Image =Environment.CurrentDirectory + "\\img\\8H.png"},
-            new Cartes() { Valeur  = 9, Nom = "9 de coeur", Image =Environment.CurrentDirectory + "\\img\\9H.png"},
-            new Cartes() { Valeur  = 10, Nom = "10 de coeur", Image =Environment.CurrentDirectory + "\\img\\10H.png"},
-            new Cartes() { Valeur  = 10, Nom = "Valet de coeur", Image = Environment.CurrentDirectory +"\\img\\JH.png" },
-            new Cartes() { Valeur  = 10, Nom = "Reine de coeur", Image = Environment.CurrentDirectory + "\\img\\QH.png" },
-            new Cartes() { Valeur  = 10, Nom = "Roi de coeur", Image = Environment.CurrentDirectory + "\\img\\KH.png" },
-            new Cartes() { Valeur  = 11, Nom = "As de coeur", Image = Environment.CurrentDirectory + "\\img\\AH.png" },
+            new Cards() { Value  = 2, Name = "2 de coeur", Image = Environment.CurrentDirectory + "\\img\\2H.png"},
+            new Cards() { Value  = 3, Name = "3 de coeur", Image = Environment.CurrentDirectory + "\\img\\3H.png"},
+            new Cards() { Value  = 4, Name = "4 de coeur", Image =Environment.CurrentDirectory + "\\img\\4H.png"},
+            new Cards() { Value  = 5, Name = "5 de coeur", Image =Environment.CurrentDirectory + "\\img\\5H.png"},
+            new Cards() { Value  = 6, Name = "6 de coeur", Image =Environment.CurrentDirectory + "\\img\\6H.png"},
+            new Cards() { Value  = 7, Name = "7 de coeur", Image =Environment.CurrentDirectory + "\\img\\7H.png"},
+            new Cards() { Value  = 8, Name = "8 de coeur", Image =Environment.CurrentDirectory + "\\img\\8H.png"},
+            new Cards() { Value  = 9, Name = "9 de coeur", Image =Environment.CurrentDirectory + "\\img\\9H.png"},
+            new Cards() { Value  = 10, Name = "10 de coeur", Image =Environment.CurrentDirectory + "\\img\\10H.png"},
+            new Cards() { Value  = 10, Name = "Valet de coeur", Image = Environment.CurrentDirectory +"\\img\\JH.png" },
+            new Cards() { Value  = 10, Name = "Reine de coeur", Image = Environment.CurrentDirectory + "\\img\\QH.png" },
+            new Cards() { Value  = 10, Name = "Roi de coeur", Image = Environment.CurrentDirectory + "\\img\\KH.png" },
+            new Cards() { Value  = 11, Name = "As de coeur", Image = Environment.CurrentDirectory + "\\img\\AH.png" },
 
             #endregion
 
             #region Trefles //Liste des cartes de trèfle
 
-            new Cartes() { Valeur  = 2, Nom = "2 de trèfle", Image  = Environment.CurrentDirectory + "\\img\\2C.png" },
-            new Cartes() { Valeur  = 3, Nom = "3 de trèfle", Image = Environment.CurrentDirectory + "\\img\\3C.png" },
-            new Cartes() { Valeur  = 4, Nom = "4 de trèfle", Image = Environment.CurrentDirectory + "\\img\\4C.png" },
-            new Cartes() { Valeur  = 5, Nom = "5 de trèfle", Image = Environment.CurrentDirectory + "\\img\\5C.png" },
-            new Cartes() { Valeur  = 6, Nom = "6 de trèfle", Image = Environment.CurrentDirectory + "\\img\\6C.png" },
-            new Cartes() { Valeur  = 7, Nom = "7 de trèfle", Image = Environment.CurrentDirectory + "\\img\\7C.png" },
-            new Cartes() { Valeur  = 8, Nom = "8 de trèfle", Image = Environment.CurrentDirectory +"\\img\\8C.png" },
-            new Cartes() { Valeur  = 9, Nom = "9 de trèfle", Image = Environment.CurrentDirectory + "\\img\\9C.png" },
-            new Cartes() { Valeur  = 10, Nom = "10 de trèfle", Image = Environment.CurrentDirectory + "\\img\\10C.png" },
-            new Cartes() { Valeur  = 10, Nom = "Valet de trèfle", Image = Environment.CurrentDirectory + "\\img\\JC.png" },
-            new Cartes() { Valeur  = 10, Nom = "Reine de trèfle", Image = Environment.CurrentDirectory + "\\img\\QC.png" },
-            new Cartes() { Valeur  = 10, Nom = "Roi de trèfle", Image = Environment.CurrentDirectory + "\\img\\KC.png" },
-            new Cartes() { Valeur  = 11, Nom = "As de trèfle", Image = Environment.CurrentDirectory + "\\img\\AC.png" },
+            new Cards() { Value  = 2, Name = "2 de trèfle", Image  = Environment.CurrentDirectory + "\\img\\2C.png" },
+            new Cards() { Value  = 3, Name = "3 de trèfle", Image = Environment.CurrentDirectory + "\\img\\3C.png" },
+            new Cards() { Value  = 4, Name = "4 de trèfle", Image = Environment.CurrentDirectory + "\\img\\4C.png" },
+            new Cards() { Value  = 5, Name = "5 de trèfle", Image = Environment.CurrentDirectory + "\\img\\5C.png" },
+            new Cards() { Value  = 6, Name = "6 de trèfle", Image = Environment.CurrentDirectory + "\\img\\6C.png" },
+            new Cards() { Value  = 7, Name = "7 de trèfle", Image = Environment.CurrentDirectory + "\\img\\7C.png" },
+            new Cards() { Value  = 8, Name = "8 de trèfle", Image = Environment.CurrentDirectory +"\\img\\8C.png" },
+            new Cards() { Value  = 9, Name = "9 de trèfle", Image = Environment.CurrentDirectory + "\\img\\9C.png" },
+            new Cards() { Value  = 10, Name = "10 de trèfle", Image = Environment.CurrentDirectory + "\\img\\10C.png" },
+            new Cards() { Value  = 10, Name = "Valet de trèfle", Image = Environment.CurrentDirectory + "\\img\\JC.png" },
+            new Cards() { Value  = 10, Name = "Reine de trèfle", Image = Environment.CurrentDirectory + "\\img\\QC.png" },
+            new Cards() { Value  = 10, Name = "Roi de trèfle", Image = Environment.CurrentDirectory + "\\img\\KC.png" },
+            new Cards() { Value  = 11, Name = "As de trèfle", Image = Environment.CurrentDirectory + "\\img\\AC.png" },
 
             #endregion
 
             #region Carreaux //Liste des cartes de carreaux
 
-            new Cartes() { Valeur  = 2, Nom = "2 de carreaux", Image = Environment.CurrentDirectory + "\\img\\2D.png" },
-            new Cartes() { Valeur  = 3, Nom = "3 de carreaux", Image = Environment.CurrentDirectory + "\\img\\3D.png" },
-            new Cartes() { Valeur  = 4, Nom = "4 de carreaux", Image = Environment.CurrentDirectory + "\\img\\4D.png" },
-            new Cartes() { Valeur  = 5, Nom = "5 de carreaux", Image = Environment.CurrentDirectory + "\\img\\5D.png" },
-            new Cartes() { Valeur  = 6, Nom = "6 de carreaux", Image = Environment.CurrentDirectory + "\\img\\6D.png" },
-            new Cartes() { Valeur  = 7, Nom = "7 de carreaux", Image = Environment.CurrentDirectory + "\\img\\7D.png" },
-            new Cartes() { Valeur  = 7, Nom = "8 de carreaux", Image = Environment.CurrentDirectory + "\\img\\8D.png" },
-            new Cartes() { Valeur  = 9, Nom = "9 de carreaux", Image = Environment.CurrentDirectory + "\\img\\9D.png" },
-            new Cartes() { Valeur  = 10, Nom = "10 de carreaux", Image = Environment.CurrentDirectory + "\\img\\10D.png" },
-            new Cartes() { Valeur  = 10, Nom = "Valet de carreaux", Image = Environment.CurrentDirectory + "\\img\\JD.png" },
-            new Cartes() { Valeur  = 10, Nom = "Reine de carreaux", Image = Environment.CurrentDirectory + "\\img\\QD.png" },
-            new Cartes() { Valeur  = 10, Nom = "Roi de carreaux", Image = Environment.CurrentDirectory + "\\img\\KD.png" },
-            new Cartes() { Valeur  = 11, Nom = "As de carreaux", Image = Environment.CurrentDirectory + "\\img\\AD.png" },
+            new Cards() { Value  = 2, Name = "2 de carreaux", Image = Environment.CurrentDirectory + "\\img\\2D.png" },
+            new Cards() { Value  = 3, Name = "3 de carreaux", Image = Environment.CurrentDirectory + "\\img\\3D.png" },
+            new Cards() { Value  = 4, Name = "4 de carreaux", Image = Environment.CurrentDirectory + "\\img\\4D.png" },
+            new Cards() { Value  = 5, Name = "5 de carreaux", Image = Environment.CurrentDirectory + "\\img\\5D.png" },
+            new Cards() { Value  = 6, Name = "6 de carreaux", Image = Environment.CurrentDirectory + "\\img\\6D.png" },
+            new Cards() { Value  = 7, Name = "7 de carreaux", Image = Environment.CurrentDirectory + "\\img\\7D.png" },
+            new Cards() { Value  = 7, Name = "8 de carreaux", Image = Environment.CurrentDirectory + "\\img\\8D.png" },
+            new Cards() { Value  = 9, Name = "9 de carreaux", Image = Environment.CurrentDirectory + "\\img\\9D.png" },
+            new Cards() { Value  = 10, Name = "10 de carreaux", Image = Environment.CurrentDirectory + "\\img\\10D.png" },
+            new Cards() { Value  = 10, Name = "Valet de carreaux", Image = Environment.CurrentDirectory + "\\img\\JD.png" },
+            new Cards() { Value  = 10, Name = "Reine de carreaux", Image = Environment.CurrentDirectory + "\\img\\QD.png" },
+            new Cards() { Value  = 10, Name = "Roi de carreaux", Image = Environment.CurrentDirectory + "\\img\\KD.png" },
+            new Cards() { Value  = 11, Name = "As de carreaux", Image = Environment.CurrentDirectory + "\\img\\AD.png" },
 
             #endregion
 
             #region Piques //Liste des cartes de piques
 
-            new Cartes() { Valeur  = 2, Nom = "2 de piques", Image = Environment.CurrentDirectory + "\\img\\2S.png" },
-            new Cartes() { Valeur  = 3, Nom = "3 de piques", Image = Environment.CurrentDirectory + "\\img\\3S.png" },
-            new Cartes() { Valeur  = 4, Nom = "4 de piques", Image = Environment.CurrentDirectory + "\\img\\4S.png" },
-            new Cartes() { Valeur  = 5, Nom = "5 de piques", Image = Environment.CurrentDirectory + "\\img\\5S.png" },
-            new Cartes() { Valeur  = 6, Nom = "6 de piques", Image = Environment.CurrentDirectory + "\\img\\6S.png" },
-            new Cartes() { Valeur  = 7, Nom = "7 de piques", Image = Environment.CurrentDirectory + "\\img\\7S.png" },
-            new Cartes() { Valeur  = 8, Nom = "8 de piques", Image = Environment.CurrentDirectory + "\\img\\8S.png" },
-            new Cartes() { Valeur  = 9, Nom = "9 de piques", Image = Environment.CurrentDirectory + "\\img\\9S.png" },
-            new Cartes() { Valeur  = 10, Nom = "10 de piques", Image = Environment.CurrentDirectory + "\\img\\10S.png" },
-            new Cartes() { Valeur  = 10, Nom = "Valet de piques", Image = Environment.CurrentDirectory + "\\img\\JS.png" },
-            new Cartes() { Valeur  = 10, Nom = "Reine de piques", Image = Environment.CurrentDirectory + "\\img\\QS.png" },
-            new Cartes() { Valeur  = 10, Nom = "Roi de piques", Image = Environment.CurrentDirectory + "\\img\\KS.png" },
-            new Cartes() { Valeur  = 11, Nom = "As de piques", Image = Environment.CurrentDirectory + "\\img\\AD.png" },
+            new Cards() { Value  = 2, Name = "2 de piques", Image = Environment.CurrentDirectory + "\\img\\2S.png" },
+            new Cards() { Value  = 3, Name = "3 de piques", Image = Environment.CurrentDirectory + "\\img\\3S.png" },
+            new Cards() { Value  = 4, Name = "4 de piques", Image = Environment.CurrentDirectory + "\\img\\4S.png" },
+            new Cards() { Value  = 5, Name = "5 de piques", Image = Environment.CurrentDirectory + "\\img\\5S.png" },
+            new Cards() { Value  = 6, Name = "6 de piques", Image = Environment.CurrentDirectory + "\\img\\6S.png" },
+            new Cards() { Value  = 7, Name = "7 de piques", Image = Environment.CurrentDirectory + "\\img\\7S.png" },
+            new Cards() { Value  = 8, Name = "8 de piques", Image = Environment.CurrentDirectory + "\\img\\8S.png" },
+            new Cards() { Value  = 9, Name = "9 de piques", Image = Environment.CurrentDirectory + "\\img\\9S.png" },
+            new Cards() { Value  = 10, Name = "10 de piques", Image = Environment.CurrentDirectory + "\\img\\10S.png" },
+            new Cards() { Value  = 10, Name = "Valet de piques", Image = Environment.CurrentDirectory + "\\img\\JS.png" },
+            new Cards() { Value  = 10, Name = "Reine de piques", Image = Environment.CurrentDirectory + "\\img\\QS.png" },
+            new Cards() { Value  = 10, Name = "Roi de piques", Image = Environment.CurrentDirectory + "\\img\\KS.png" },
+            new Cards() { Value  = 11, Name = "As de piques", Image = Environment.CurrentDirectory + "\\img\\AD.png" },
             #endregion
         };
-    #endregion
+        #endregion
 
         public FormBlackJack()
         {
             InitializeComponent();
+            IList<PictureBox> pictureBoxes = this.Controls.OfType<PictureBox>().ToList();
+            PlayerPictureBoxes = pictureBoxes.Select(x => x).Where(w=>w.Name.StartsWith("pictureBoxJoueur")).ToList();
+            CasinoPictureBoxes = pictureBoxes.Select(x => x).Where(w => w.Name.StartsWith("pictureBoxCasino")).ToList();
+            BlackjackAction = new BlackjackAction(PlayerSum, CasinoSum, UserCards, CasinoCards, allCards, lblJoueur, lblTxCasino, PlayerPictureBoxes, CasinoPictureBoxes);
         }
-
         /*NOTES
          pos1 = 829; 107
          pos2 = 857; 123
@@ -161,33 +157,34 @@ namespace BlackJack
 
             else {
                 //pictureBoxCasino4.Visible = true;
-                while (sommecasino <= 17)
+                while (CasinoSum <= 17)
                 {
                     int CarteAlea3 = CarteAleatoire();
-                    while (CartesUtilisees.Contains(CarteAlea3))
+                    while (UsedCards.Contains(CarteAlea3))
                     {
                         CarteAlea3 = CarteAleatoire();
                     }
                     CarteAlea3 = 1 * CarteAlea3;
-                    Cartes carte3 = jeu[CarteAlea3];
-                    CartesUtilisees.Add(CarteAlea3);
+                    Cards carte3 = allCards[CarteAlea3];
+                    UsedCards.Add(CarteAlea3);
 
-                    ListeCarteCasino.Add(carte3);
+                    CasinoCards.Add(carte3);
                     int CarteCasino3 = CarteAleatoire();
-                    Cartes Carte4 = jeu[CarteCasino3];
-                    CartesUtilisees.Add(CarteCasino3);
+                    Cards Carte4 = allCards[CarteCasino3];
+                    UsedCards.Add(CarteCasino3);
 
-                    if (CartesUtilisees.Contains(CarteCasino3)) CarteCasino3 = CarteAleatoire();
+                    if (UsedCards.Contains(CarteCasino3)) CarteCasino3 = CarteAleatoire();
                     else CarteCasino3 = 1 * CarteCasino3;
 
-                    pictureBoxCasino.ImageLocation = carte3.Image;
-                    pictureBoxCasino.SizeMode = PictureBoxSizeMode.StretchImage;
+                    pictureBoxCasino1.ImageLocation = carte3.Image;
+                    pictureBoxCasino1.SizeMode = PictureBoxSizeMode.StretchImage;
 
-                    ListeCarteCasino.Add(Carte4);
+                    CasinoCards.Add(Carte4);
                     pictureBoxCasino2.ImageLocation = Carte4.Image;
                     AdditionCasino();
                 }
-                ConditionsScore();
+                //ConditionsScore();
+                BlackjackAction.ScoreConditions(default, default, default, bet);
             }
             
         }
@@ -196,10 +193,11 @@ namespace BlackJack
         private void distribuerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DetectionCredits();
-            if(sommejoueur == 22)
+            Money -= bet;
+            if(PlayerSum == 22)
             {
-                sommejoueur = 21;
-                lblJoueur.Text = JoueurTX + sommejoueur;
+                PlayerSum = 21;
+                lblJoueur.Text = JoueurTX + PlayerSum;
                 BlackJack();
             }
         }
@@ -248,23 +246,23 @@ namespace BlackJack
 
             else
             {
-                sommejoueur = 0;
+                PlayerSum = 0;
                 int carteAlea = CarteAleatoire();
-                Cartes carte3 = jeu[carteAlea];
-                CartesUtilisees.Add(carteAlea);
+                Cards carte3 = allCards[carteAlea];
+                UsedCards.Add(carteAlea);
 
-                if (CartesUtilisees.Contains(carteAlea)) carteAlea = CarteAleatoire();
+                if (UsedCards.Contains(carteAlea)) carteAlea = CarteAleatoire();
                 else carteAlea = 1 * carteAlea;
 
 
                 //Nouveau Form
                 pictureBoxJoueur3.Visible = true;
 
-                ListeCarteJoueur.Add(carte3);
+                UserCards.Add(carte3);
                 pictureBoxJoueur3.ImageLocation = carte3.Image;
                 AdditionJoueur();
             }
-            ConditionsScoreCarte();
+            BlackjackAction.DistributionConditions(bet, Money, PlayerSum, CasinoSum);
         }
 
         private void nouvellePartieToolStripMenuItem_Click(object sender, EventArgs e)
@@ -283,11 +281,6 @@ namespace BlackJack
         private void rougeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ChangeCardColor(Properties.Resources.rouge, ActiveForm);
-        }
-
-        private void toolStripTextBox1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void bleuToolStripMenuItem_Click(object sender, EventArgs e)
@@ -314,7 +307,6 @@ namespace BlackJack
         {
             ChangeCardColor(Properties.Resources.violet, ActiveForm);
         }
-
         private void vertToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ChangeCardColor(Properties.Resources.vert, ActiveForm);

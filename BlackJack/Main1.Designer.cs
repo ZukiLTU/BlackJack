@@ -61,6 +61,158 @@ namespace BlackJack {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=67, Height=22}.
+        /// </summary>
+        public static System.Drawing.Size aProposToolStripMenuItem_Size {
+            get {
+                object obj = ResourceManager.GetObject("aProposToolStripMenuItem.Size", resourceCulture);
+                return ((System.Drawing.Size)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A propos.
+        /// </summary>
+        public static string aProposToolStripMenuItem_Text {
+            get {
+                return ResourceManager.GetString("aProposToolStripMenuItem.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=137, Height=22}.
+        /// </summary>
+        public static System.Drawing.Size arrièrePlanToolStripMenuItem_Size {
+            get {
+                object obj = ResourceManager.GetObject("arrièrePlanToolStripMenuItem.Size", resourceCulture);
+                return ((System.Drawing.Size)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Arrière-Plan.
+        /// </summary>
+        public static string arrièrePlanToolStripMenuItem_Text {
+            get {
+                return ResourceManager.GetString("arrièrePlanToolStripMenuItem.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=113, Height=22}.
+        /// </summary>
+        public static System.Drawing.Size bleuToolStripMenuItem_Size {
+            get {
+                object obj = ResourceManager.GetObject("bleuToolStripMenuItem.Size", resourceCulture);
+                return ((System.Drawing.Size)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bleu.
+        /// </summary>
+        public static string bleuToolStripMenuItem_Text {
+            get {
+                return ResourceManager.GetString("bleuToolStripMenuItem.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=137, Height=22}.
+        /// </summary>
+        public static System.Drawing.Size cartesToolStripMenuItem_Size {
+            get {
+                object obj = ResourceManager.GetObject("cartesToolStripMenuItem.Size", resourceCulture);
+                return ((System.Drawing.Size)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cartes.
+        /// </summary>
+        public static string cartesToolStripMenuItem_Text {
+            get {
+                return ResourceManager.GetString("cartesToolStripMenuItem.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=47, Height=22}.
+        /// </summary>
+        public static System.Drawing.Size carteToolStripMenuItem_Size {
+            get {
+                object obj = ResourceManager.GetObject("carteToolStripMenuItem.Size", resourceCulture);
+                return ((System.Drawing.Size)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Carte.
+        /// </summary>
+        public static string carteToolStripMenuItem_Text {
+            get {
+                return ResourceManager.GetString("carteToolStripMenuItem.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=133, Height=22}.
+        /// </summary>
+        public static System.Drawing.Size couvertureToolStripMenuItem_Size {
+            get {
+                object obj = ResourceManager.GetObject("couvertureToolStripMenuItem.Size", resourceCulture);
+                return ((System.Drawing.Size)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Couverture.
+        /// </summary>
+        public static string couvertureToolStripMenuItem_Text {
+            get {
+                return ResourceManager.GetString("couvertureToolStripMenuItem.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=70, Height=22}.
+        /// </summary>
+        public static System.Drawing.Size distribuerToolStripMenuItem_Size {
+            get {
+                object obj = ResourceManager.GetObject("distribuerToolStripMenuItem.Size", resourceCulture);
+                return ((System.Drawing.Size)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Distribuer.
+        /// </summary>
+        public static string distribuerToolStripMenuItem_Text {
+            get {
+                return ResourceManager.GetString("distribuerToolStripMenuItem.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=117, Height=22}.
+        /// </summary>
+        public static System.Drawing.Size englishToolStripMenuItem_Size {
+            get {
+                object obj = ResourceManager.GetObject("englishToolStripMenuItem.Size", resourceCulture);
+                return ((System.Drawing.Size)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to English.
+        /// </summary>
+        public static string englishToolStripMenuItem_Text {
+            get {
+                return ResourceManager.GetString("englishToolStripMenuItem.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Point similar to {X=176,Y=19}.
         /// </summary>
         public static System.Drawing.Point eventLog1_TrayLocation {
@@ -71,12 +223,944 @@ namespace BlackJack {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=117, Height=22}.
+        /// </summary>
+        public static System.Drawing.Size françaisToolStripMenuItem_Size {
+            get {
+                object obj = ResourceManager.GetObject("françaisToolStripMenuItem.Size", resourceCulture);
+                return ((System.Drawing.Size)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Français.
+        /// </summary>
+        public static string françaisToolStripMenuItem_Text {
+            get {
+                return ResourceManager.GetString("françaisToolStripMenuItem.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Boolean similar to True.
+        /// </summary>
+        public static bool label1_AutoSize {
+            get {
+                object obj = ResourceManager.GetObject("label1.AutoSize", resourceCulture);
+                return ((bool)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=330,Y=80}.
+        /// </summary>
+        public static System.Drawing.Point label1_Location {
+            get {
+                object obj = ResourceManager.GetObject("label1.Location", resourceCulture);
+                return ((System.Drawing.Point)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=2,Top=0,Right=2,Bottom=0}.
+        /// </summary>
+        public static System.Windows.Forms.Padding label1_Margin {
+            get {
+                object obj = ResourceManager.GetObject("label1.Margin", resourceCulture);
+                return ((System.Windows.Forms.Padding)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=38, Height=13}.
+        /// </summary>
+        public static System.Drawing.Size label1_Size {
+            get {
+                object obj = ResourceManager.GetObject("label1.Size", resourceCulture);
+                return ((System.Drawing.Size)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Int32 similar to 8.
+        /// </summary>
+        public static int label1_TabIndex {
+            get {
+                object obj = ResourceManager.GetObject("label1.TabIndex", resourceCulture);
+                return ((int)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mise : .
+        /// </summary>
+        public static string label1_Text {
+            get {
+                return ResourceManager.GetString("label1.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=137, Height=22}.
+        /// </summary>
+        public static System.Drawing.Size langueToolStripMenuItem_Size {
+            get {
+                object obj = ResourceManager.GetObject("langueToolStripMenuItem.Size", resourceCulture);
+                return ((System.Drawing.Size)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Langue.
+        /// </summary>
+        public static string langueToolStripMenuItem_Text {
+            get {
+                return ResourceManager.GetString("langueToolStripMenuItem.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Boolean similar to True.
+        /// </summary>
+        public static bool lblBal_AutoSize {
+            get {
+                object obj = ResourceManager.GetObject("lblBal.AutoSize", resourceCulture);
+                return ((bool)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=311,Y=35}.
+        /// </summary>
+        public static System.Drawing.Point lblBal_Location {
+            get {
+                object obj = ResourceManager.GetObject("lblBal.Location", resourceCulture);
+                return ((System.Drawing.Point)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=2,Top=0,Right=2,Bottom=0}.
+        /// </summary>
+        public static System.Windows.Forms.Padding lblBal_Margin {
+            get {
+                object obj = ResourceManager.GetObject("lblBal.Margin", resourceCulture);
+                return ((System.Windows.Forms.Padding)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=71, Height=13}.
+        /// </summary>
+        public static System.Drawing.Size lblBal_Size {
+            get {
+                object obj = ResourceManager.GetObject("lblBal.Size", resourceCulture);
+                return ((System.Drawing.Size)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Int32 similar to 7.
+        /// </summary>
+        public static int lblBal_TabIndex {
+            get {
+                object obj = ResourceManager.GetObject("lblBal.TabIndex", resourceCulture);
+                return ((int)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Crédits : NAN.
+        /// </summary>
+        public static string lblBal_Text {
+            get {
+                return ResourceManager.GetString("lblBal.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Boolean similar to True.
+        /// </summary>
+        public static bool lblJoueur_AutoSize {
+            get {
+                object obj = ResourceManager.GetObject("lblJoueur.AutoSize", resourceCulture);
+                return ((bool)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=107,Y=35}.
+        /// </summary>
+        public static System.Drawing.Point lblJoueur_Location {
+            get {
+                object obj = ResourceManager.GetObject("lblJoueur.Location", resourceCulture);
+                return ((System.Drawing.Point)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=2,Top=0,Right=2,Bottom=0}.
+        /// </summary>
+        public static System.Windows.Forms.Padding lblJoueur_Margin {
+            get {
+                object obj = ResourceManager.GetObject("lblJoueur.Margin", resourceCulture);
+                return ((System.Windows.Forms.Padding)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=71, Height=13}.
+        /// </summary>
+        public static System.Drawing.Size lblJoueur_Size {
+            get {
+                object obj = ResourceManager.GetObject("lblJoueur.Size", resourceCulture);
+                return ((System.Drawing.Size)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Int32 similar to 3.
+        /// </summary>
+        public static int lblJoueur_TabIndex {
+            get {
+                object obj = ResourceManager.GetObject("lblJoueur.TabIndex", resourceCulture);
+                return ((int)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Joueur : NAN.
+        /// </summary>
+        public static string lblJoueur_Text {
+            get {
+                return ResourceManager.GetString("lblJoueur.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Boolean similar to True.
+        /// </summary>
+        public static bool lblTxCasino_AutoSize {
+            get {
+                object obj = ResourceManager.GetObject("lblTxCasino.AutoSize", resourceCulture);
+                return ((bool)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=507,Y=32}.
+        /// </summary>
+        public static System.Drawing.Point lblTxCasino_Location {
+            get {
+                object obj = ResourceManager.GetObject("lblTxCasino.Location", resourceCulture);
+                return ((System.Drawing.Point)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=2,Top=0,Right=2,Bottom=0}.
+        /// </summary>
+        public static System.Windows.Forms.Padding lblTxCasino_Margin {
+            get {
+                object obj = ResourceManager.GetObject("lblTxCasino.Margin", resourceCulture);
+                return ((System.Windows.Forms.Padding)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=71, Height=13}.
+        /// </summary>
+        public static System.Drawing.Size lblTxCasino_Size {
+            get {
+                object obj = ResourceManager.GetObject("lblTxCasino.Size", resourceCulture);
+                return ((System.Drawing.Size)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Int32 similar to 4.
+        /// </summary>
+        public static int lblTxCasino_TabIndex {
+            get {
+                object obj = ResourceManager.GetObject("lblTxCasino.TabIndex", resourceCulture);
+                return ((int)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Casino : NAN.
+        /// </summary>
+        public static string lblTxCasino_Text {
+            get {
+                return ResourceManager.GetString("lblTxCasino.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=0,Y=0}.
+        /// </summary>
+        public static System.Drawing.Point menuStrip1_Location {
+            get {
+                object obj = ResourceManager.GetObject("menuStrip1.Location", resourceCulture);
+                return ((System.Drawing.Point)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=4,Top=1,Right=0,Bottom=1}.
+        /// </summary>
+        public static System.Windows.Forms.Padding menuStrip1_Padding {
+            get {
+                object obj = ResourceManager.GetObject("menuStrip1.Padding", resourceCulture);
+                return ((System.Windows.Forms.Padding)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=709, Height=24}.
+        /// </summary>
+        public static System.Drawing.Size menuStrip1_Size {
+            get {
+                object obj = ResourceManager.GetObject("menuStrip1.Size", resourceCulture);
+                return ((System.Drawing.Size)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Int32 similar to 2.
+        /// </summary>
+        public static int menuStrip1_TabIndex {
+            get {
+                object obj = ResourceManager.GetObject("menuStrip1.TabIndex", resourceCulture);
+                return ((int)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to menuStrip1.
+        /// </summary>
+        public static string menuStrip1_Text {
+            get {
+                return ResourceManager.GetString("menuStrip1.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Point similar to {X=20,Y=19}.
         /// </summary>
         public static System.Drawing.Point menuStrip1_TrayLocation {
             get {
                 object obj = ResourceManager.GetObject("menuStrip1.TrayLocation", resourceCulture);
                 return ((System.Drawing.Point)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=113, Height=22}.
+        /// </summary>
+        public static System.Drawing.Size noirToolStripMenuItem_Size {
+            get {
+                object obj = ResourceManager.GetObject("noirToolStripMenuItem.Size", resourceCulture);
+                return ((System.Drawing.Size)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Noir.
+        /// </summary>
+        public static string noirToolStripMenuItem_Text {
+            get {
+                return ResourceManager.GetString("noirToolStripMenuItem.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=99, Height=22}.
+        /// </summary>
+        public static System.Drawing.Size nouvellePartieToolStripMenuItem_Size {
+            get {
+                object obj = ResourceManager.GetObject("nouvellePartieToolStripMenuItem.Size", resourceCulture);
+                return ((System.Drawing.Size)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nouvelle partie.
+        /// </summary>
+        public static string nouvellePartieToolStripMenuItem_Text {
+            get {
+                return ResourceManager.GetString("nouvellePartieToolStripMenuItem.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=113, Height=22}.
+        /// </summary>
+        public static System.Drawing.Size orangeToolStripMenuItem_Size {
+            get {
+                object obj = ResourceManager.GetObject("orangeToolStripMenuItem.Size", resourceCulture);
+                return ((System.Drawing.Size)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Orange.
+        /// </summary>
+        public static string orangeToolStripMenuItem_Text {
+            get {
+                return ResourceManager.GetString("orangeToolStripMenuItem.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=78, Height=22}.
+        /// </summary>
+        public static System.Drawing.Size paramètresToolStripMenuItem_Size {
+            get {
+                object obj = ResourceManager.GetObject("paramètresToolStripMenuItem.Size", resourceCulture);
+                return ((System.Drawing.Size)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Paramètres.
+        /// </summary>
+        public static string paramètresToolStripMenuItem_Text {
+            get {
+                return ResourceManager.GetString("paramètresToolStripMenuItem.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=427,Y=70}.
+        /// </summary>
+        public static System.Drawing.Point pictureBoxCasino_Location {
+            get {
+                object obj = ResourceManager.GetObject("pictureBoxCasino.Location", resourceCulture);
+                return ((System.Drawing.Point)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=2,Top=2,Right=2,Bottom=2}.
+        /// </summary>
+        public static System.Windows.Forms.Padding pictureBoxCasino_Margin {
+            get {
+                object obj = ResourceManager.GetObject("pictureBoxCasino.Margin", resourceCulture);
+                return ((System.Windows.Forms.Padding)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=101, Height=142}.
+        /// </summary>
+        public static System.Drawing.Size pictureBoxCasino_Size {
+            get {
+                object obj = ResourceManager.GetObject("pictureBoxCasino.Size", resourceCulture);
+                return ((System.Drawing.Size)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Windows.Forms.PictureBoxSizeMode similar to StretchImage.
+        /// </summary>
+        public static System.Windows.Forms.PictureBoxSizeMode pictureBoxCasino_SizeMode {
+            get {
+                object obj = ResourceManager.GetObject("pictureBoxCasino.SizeMode", resourceCulture);
+                return ((System.Windows.Forms.PictureBoxSizeMode)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Int32 similar to 15.
+        /// </summary>
+        public static int pictureBoxCasino_TabIndex {
+            get {
+                object obj = ResourceManager.GetObject("pictureBoxCasino.TabIndex", resourceCulture);
+                return ((int)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=427,Y=70}.
+        /// </summary>
+        public static System.Drawing.Point pictureBoxCasino1_Location {
+            get {
+                object obj = ResourceManager.GetObject("pictureBoxCasino1.Location", resourceCulture);
+                return ((System.Drawing.Point)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Int32 similar to 15.
+        /// </summary>
+        public static int pictureBoxCasino1_TabIndex {
+            get {
+                object obj = ResourceManager.GetObject("pictureBoxCasino1.TabIndex", resourceCulture);
+                return ((int)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=553,Y=70}.
+        /// </summary>
+        public static System.Drawing.Point pictureBoxCasino2_Location {
+            get {
+                object obj = ResourceManager.GetObject("pictureBoxCasino2.Location", resourceCulture);
+                return ((System.Drawing.Point)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=2,Top=2,Right=2,Bottom=2}.
+        /// </summary>
+        public static System.Windows.Forms.Padding pictureBoxCasino2_Margin {
+            get {
+                object obj = ResourceManager.GetObject("pictureBoxCasino2.Margin", resourceCulture);
+                return ((System.Windows.Forms.Padding)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=101, Height=142}.
+        /// </summary>
+        public static System.Drawing.Size pictureBoxCasino2_Size {
+            get {
+                object obj = ResourceManager.GetObject("pictureBoxCasino2.Size", resourceCulture);
+                return ((System.Drawing.Size)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Windows.Forms.PictureBoxSizeMode similar to StretchImage.
+        /// </summary>
+        public static System.Windows.Forms.PictureBoxSizeMode pictureBoxCasino2_SizeMode {
+            get {
+                object obj = ResourceManager.GetObject("pictureBoxCasino2.SizeMode", resourceCulture);
+                return ((System.Windows.Forms.PictureBoxSizeMode)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Int32 similar to 16.
+        /// </summary>
+        public static int pictureBoxCasino2_TabIndex {
+            get {
+                object obj = ResourceManager.GetObject("pictureBoxCasino2.TabIndex", resourceCulture);
+                return ((int)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=571,Y=80}.
+        /// </summary>
+        public static System.Drawing.Point pictureBoxCasino4_Location {
+            get {
+                object obj = ResourceManager.GetObject("pictureBoxCasino4.Location", resourceCulture);
+                return ((System.Drawing.Point)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=2,Top=2,Right=2,Bottom=2}.
+        /// </summary>
+        public static System.Windows.Forms.Padding pictureBoxCasino4_Margin {
+            get {
+                object obj = ResourceManager.GetObject("pictureBoxCasino4.Margin", resourceCulture);
+                return ((System.Windows.Forms.Padding)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=101, Height=142}.
+        /// </summary>
+        public static System.Drawing.Size pictureBoxCasino4_Size {
+            get {
+                object obj = ResourceManager.GetObject("pictureBoxCasino4.Size", resourceCulture);
+                return ((System.Drawing.Size)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Windows.Forms.PictureBoxSizeMode similar to StretchImage.
+        /// </summary>
+        public static System.Windows.Forms.PictureBoxSizeMode pictureBoxCasino4_SizeMode {
+            get {
+                object obj = ResourceManager.GetObject("pictureBoxCasino4.SizeMode", resourceCulture);
+                return ((System.Windows.Forms.PictureBoxSizeMode)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Int32 similar to 18.
+        /// </summary>
+        public static int pictureBoxCasino4_TabIndex {
+            get {
+                object obj = ResourceManager.GetObject("pictureBoxCasino4.TabIndex", resourceCulture);
+                return ((int)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Boolean similar to False.
+        /// </summary>
+        public static bool pictureBoxCasino4_Visible {
+            get {
+                object obj = ResourceManager.GetObject("pictureBoxCasino4.Visible", resourceCulture);
+                return ((bool)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=32,Y=70}.
+        /// </summary>
+        public static System.Drawing.Point pictureBoxJoueur_Location {
+            get {
+                object obj = ResourceManager.GetObject("pictureBoxJoueur.Location", resourceCulture);
+                return ((System.Drawing.Point)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=2,Top=2,Right=2,Bottom=2}.
+        /// </summary>
+        public static System.Windows.Forms.Padding pictureBoxJoueur_Margin {
+            get {
+                object obj = ResourceManager.GetObject("pictureBoxJoueur.Margin", resourceCulture);
+                return ((System.Windows.Forms.Padding)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=101, Height=142}.
+        /// </summary>
+        public static System.Drawing.Size pictureBoxJoueur_Size {
+            get {
+                object obj = ResourceManager.GetObject("pictureBoxJoueur.Size", resourceCulture);
+                return ((System.Drawing.Size)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Windows.Forms.PictureBoxSizeMode similar to StretchImage.
+        /// </summary>
+        public static System.Windows.Forms.PictureBoxSizeMode pictureBoxJoueur_SizeMode {
+            get {
+                object obj = ResourceManager.GetObject("pictureBoxJoueur.SizeMode", resourceCulture);
+                return ((System.Windows.Forms.PictureBoxSizeMode)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Int32 similar to 10.
+        /// </summary>
+        public static int pictureBoxJoueur_TabIndex {
+            get {
+                object obj = ResourceManager.GetObject("pictureBoxJoueur.TabIndex", resourceCulture);
+                return ((int)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=32,Y=70}.
+        /// </summary>
+        public static System.Drawing.Point pictureBoxJoueur1_Location {
+            get {
+                object obj = ResourceManager.GetObject("pictureBoxJoueur1.Location", resourceCulture);
+                return ((System.Drawing.Point)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Int32 similar to 10.
+        /// </summary>
+        public static int pictureBoxJoueur1_TabIndex {
+            get {
+                object obj = ResourceManager.GetObject("pictureBoxJoueur1.TabIndex", resourceCulture);
+                return ((int)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=157,Y=70}.
+        /// </summary>
+        public static System.Drawing.Point pictureBoxJoueur2_Location {
+            get {
+                object obj = ResourceManager.GetObject("pictureBoxJoueur2.Location", resourceCulture);
+                return ((System.Drawing.Point)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=2,Top=2,Right=2,Bottom=2}.
+        /// </summary>
+        public static System.Windows.Forms.Padding pictureBoxJoueur2_Margin {
+            get {
+                object obj = ResourceManager.GetObject("pictureBoxJoueur2.Margin", resourceCulture);
+                return ((System.Windows.Forms.Padding)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=101, Height=142}.
+        /// </summary>
+        public static System.Drawing.Size pictureBoxJoueur2_Size {
+            get {
+                object obj = ResourceManager.GetObject("pictureBoxJoueur2.Size", resourceCulture);
+                return ((System.Drawing.Size)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Windows.Forms.PictureBoxSizeMode similar to StretchImage.
+        /// </summary>
+        public static System.Windows.Forms.PictureBoxSizeMode pictureBoxJoueur2_SizeMode {
+            get {
+                object obj = ResourceManager.GetObject("pictureBoxJoueur2.SizeMode", resourceCulture);
+                return ((System.Windows.Forms.PictureBoxSizeMode)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Int32 similar to 14.
+        /// </summary>
+        public static int pictureBoxJoueur2_TabIndex {
+            get {
+                object obj = ResourceManager.GetObject("pictureBoxJoueur2.TabIndex", resourceCulture);
+                return ((int)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=176,Y=88}.
+        /// </summary>
+        public static System.Drawing.Point pictureBoxJoueur3_Location {
+            get {
+                object obj = ResourceManager.GetObject("pictureBoxJoueur3.Location", resourceCulture);
+                return ((System.Drawing.Point)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=2,Top=2,Right=2,Bottom=2}.
+        /// </summary>
+        public static System.Windows.Forms.Padding pictureBoxJoueur3_Margin {
+            get {
+                object obj = ResourceManager.GetObject("pictureBoxJoueur3.Margin", resourceCulture);
+                return ((System.Windows.Forms.Padding)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=101, Height=142}.
+        /// </summary>
+        public static System.Drawing.Size pictureBoxJoueur3_Size {
+            get {
+                object obj = ResourceManager.GetObject("pictureBoxJoueur3.Size", resourceCulture);
+                return ((System.Drawing.Size)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Windows.Forms.PictureBoxSizeMode similar to StretchImage.
+        /// </summary>
+        public static System.Windows.Forms.PictureBoxSizeMode pictureBoxJoueur3_SizeMode {
+            get {
+                object obj = ResourceManager.GetObject("pictureBoxJoueur3.SizeMode", resourceCulture);
+                return ((System.Windows.Forms.PictureBoxSizeMode)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Int32 similar to 17.
+        /// </summary>
+        public static int pictureBoxJoueur3_TabIndex {
+            get {
+                object obj = ResourceManager.GetObject("pictureBoxJoueur3.TabIndex", resourceCulture);
+                return ((int)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Boolean similar to False.
+        /// </summary>
+        public static bool pictureBoxJoueur3_Visible {
+            get {
+                object obj = ResourceManager.GetObject("pictureBoxJoueur3.Visible", resourceCulture);
+                return ((bool)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=47, Height=22}.
+        /// </summary>
+        public static System.Drawing.Size resteToolStripMenuItem_Size {
+            get {
+                object obj = ResourceManager.GetObject("resteToolStripMenuItem.Size", resourceCulture);
+                return ((System.Drawing.Size)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reste.
+        /// </summary>
+        public static string resteToolStripMenuItem_Text {
+            get {
+                return ResourceManager.GetString("resteToolStripMenuItem.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=113, Height=22}.
+        /// </summary>
+        public static System.Drawing.Size rougeToolStripMenuItem_Size {
+            get {
+                object obj = ResourceManager.GetObject("rougeToolStripMenuItem.Size", resourceCulture);
+                return ((System.Drawing.Size)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rouge.
+        /// </summary>
+        public static string rougeToolStripMenuItem_Text {
+            get {
+                return ResourceManager.GetString("rougeToolStripMenuItem.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=108, Height=22}.
+        /// </summary>
+        public static System.Drawing.Size rougeToolStripMenuItem1_Size {
+            get {
+                object obj = ResourceManager.GetObject("rougeToolStripMenuItem1.Size", resourceCulture);
+                return ((System.Drawing.Size)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rouge.
+        /// </summary>
+        public static string rougeToolStripMenuItem1_Text {
+            get {
+                return ResourceManager.GetString("rougeToolStripMenuItem1.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=313,Y=102}.
+        /// </summary>
+        public static System.Drawing.Point textBoxInt_Location {
+            get {
+                object obj = ResourceManager.GetObject("textBoxInt.Location", resourceCulture);
+                return ((System.Drawing.Point)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=2,Top=2,Right=2,Bottom=2}.
+        /// </summary>
+        public static System.Windows.Forms.Padding textBoxInt_Margin {
+            get {
+                object obj = ResourceManager.GetObject("textBoxInt.Margin", resourceCulture);
+                return ((System.Windows.Forms.Padding)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=68, Height=20}.
+        /// </summary>
+        public static System.Drawing.Size textBoxInt_Size {
+            get {
+                object obj = ResourceManager.GetObject("textBoxInt.Size", resourceCulture);
+                return ((System.Drawing.Size)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Int32 similar to 9.
+        /// </summary>
+        public static int textBoxInt_TabIndex {
+            get {
+                object obj = ResourceManager.GetObject("textBoxInt.TabIndex", resourceCulture);
+                return ((int)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=117, Height=22}.
+        /// </summary>
+        public static System.Drawing.Size toolStripMenuItem1_Size {
+            get {
+                object obj = ResourceManager.GetObject("toolStripMenuItem1.Size", resourceCulture);
+                return ((System.Drawing.Size)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lietuvių.
+        /// </summary>
+        public static string toolStripMenuItem1_Text {
+            get {
+                return ResourceManager.GetString("toolStripMenuItem1.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=108, Height=22}.
+        /// </summary>
+        public static System.Drawing.Size toolStripTextBox1_Size {
+            get {
+                object obj = ResourceManager.GetObject("toolStripTextBox1.Size", resourceCulture);
+                return ((System.Drawing.Size)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vert.
+        /// </summary>
+        public static string toolStripTextBox1_Text {
+            get {
+                return ResourceManager.GetString("toolStripTextBox1.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=113, Height=22}.
+        /// </summary>
+        public static System.Drawing.Size vertToolStripMenuItem_Size {
+            get {
+                object obj = ResourceManager.GetObject("vertToolStripMenuItem.Size", resourceCulture);
+                return ((System.Drawing.Size)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vert.
+        /// </summary>
+        public static string vertToolStripMenuItem_Text {
+            get {
+                return ResourceManager.GetString("vertToolStripMenuItem.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=113, Height=22}.
+        /// </summary>
+        public static System.Drawing.Size violetToolStripMenuItem_Size {
+            get {
+                object obj = ResourceManager.GetObject("violetToolStripMenuItem.Size", resourceCulture);
+                return ((System.Drawing.Size)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Violet.
+        /// </summary>
+        public static string violetToolStripMenuItem_Text {
+            get {
+                return ResourceManager.GetString("violetToolStripMenuItem.Text", resourceCulture);
             }
         }
     }

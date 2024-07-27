@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlackJack
-{    class Cartes
+namespace BlackJack.Card
+{   
+    public class Cards
     {
-        public int Valeur { get; set; }
-        public string Nom { get; set; }
+        public int Value { get; set; }
+        public string Name { get; set; }
         public string Image { get; set; }
     }
 }

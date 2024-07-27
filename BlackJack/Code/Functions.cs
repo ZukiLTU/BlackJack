@@ -4,42 +4,44 @@ using System.Windows.Forms;
 using System.Collections.Generic;
 using BlackJack;
 using System.Linq;
+using BlackJack.Card;
 
 namespace BlackJack
 {
     public partial class FormBlackJack : Form
     {
         //FONCTIONS
-        private void Reinitialiser()
-        {
-            sommejoueur = 0;
-            sommecasino = 0;
+        //private void Reinitialiser()
+        //{
+        //    PlayerSum = 0;
+        //    sommecasino = 0;
 
-            Distr = false;
-            Fin = true;
+        //    Distr = false;
+        //    Fin = true;
 
-            lblJoueur.Text = JoueurTX + sommejoueur;
-            lblTxCasino.Text = CasinoTX + sommecasino;
-            if (pictureBoxJoueur3.Visible == true)
-            {
-                pictureBoxJoueur3.Visible = false;
-            }
-            pictureBoxCasino4.Visible = false;
+        //    lblJoueur.Text = JoueurTX + PlayerSum;
+        //    lblTxCasino.Text = CasinoTX + sommecasino;
+        //    if (pictureBoxJoueur3.Visible == true)
+        //    {
+        //        pictureBoxJoueur3.Visible = false;
+        //    }
+        //    pictureBoxCasino4.Visible = false;
 
-            textBoxInt.Clear();
-            ListeCarteCasino.Clear();
-            ListeCarteJoueur.Clear();
-            CartesUtilisees.Clear();
+        //    textBoxInt.Clear();
+        //    CasinoCards.Clear();
+        //    UserCards.Clear();
+        //    UsedCards.Clear();
 
-            Banqueroute();
-            InitCartes();
+        //    Banqueroute();
+        //    InitCartes();
 
-        }
+        //}
 
         private void DetectionCredits()
         {
-            int.TryParse(textBoxInt.Text, out Mise);
-            if (!int.TryParse(textBoxInt.Text, out Mise))
+            int.TryParse(textBoxInt.Text, out bet);
+            lblBal.Text = $"Crédits : {Money}";
+            if (!int.TryParse(textBoxInt.Text, out bet))
             {
                 if (Lietuviu)
                 {
@@ -58,7 +60,7 @@ namespace BlackJack
                 }
             }
 
-            else if (Mise > Argent)
+            else if (bet > Money)
             {
                 if (Lietuviu)
                 {
@@ -77,7 +79,7 @@ namespace BlackJack
            
             }
 
-            else if (Mise <= 0)
+            else if (bet <= 0)
             {
 
                 if (Lietuviu)
@@ -147,6 +149,7 @@ namespace BlackJack
                 {
                     Commencer();
                     AdditionJoueur();
+                    Money -= bet;
                 }
             }
         }
@@ -154,27 +157,27 @@ namespace BlackJack
         private int CarteAleatoire()
         {
             int carteAlea;
-            carteAlea = random.Next(0, jeu.Count); //génère entre 52 cartes
+            carteAlea = random.Next(0, allCards.Count); //génère entre 52 cartes
             return carteAlea;
         }
 
         private void AdditionJoueur()
         {
-            sommejoueur = 0;
-            for (int i = 0; i < ListeCarteJoueur.Count; i++)
+            PlayerSum = 0;
+            for (int i = 0; i < UserCards.Count; i++)
             {
-                sommejoueur += ListeCarteJoueur[i].Valeur;
-                lblJoueur.Text = JoueurTX + sommejoueur;
+                PlayerSum += UserCards[i].Value;
+                lblJoueur.Text = JoueurTX + PlayerSum;
             }
 
-            if (sommejoueur > 21)
+            if (PlayerSum > 21)
             {
-                foreach (Cartes c in ListeCarteJoueur)
+                foreach (Cards c in UserCards)
                 {
-                    if (c.Valeur == 11)
+                    if (c.Value == 11)
                     {
-                        sommejoueur -= 10;
-                        if (sommejoueur <= 21)
+                        PlayerSum -= 10;
+                        if (PlayerSum <= 21)
                         {
                             break;
                         }
@@ -185,21 +188,21 @@ namespace BlackJack
 
         private void AdditionCasino()
         {
-            sommecasino = 0;
-            for (int i = 0; i < ListeCarteCasino.Count; i++)
+            CasinoSum = 0;
+            for (int i = 0; i < CasinoCards.Count; i++)
             {
-                sommecasino += ListeCarteCasino[i].Valeur;
-                lblTxCasino.Text = CasinoTX + sommecasino;
+                CasinoSum += CasinoCards[i].Value;
+                lblTxCasino.Text = CasinoTX + CasinoSum;
             }
 
-            if (sommecasino > 21)
+            if (CasinoSum > 21)
             {
-                foreach (Cartes c in ListeCarteCasino)
+                foreach (Cards c in CasinoCards)
                 {
-                    if (c.Valeur == 11)
+                    if (c.Value == 11)
                     {
-                        sommecasino -= 10;
-                        if (sommecasino <= 21)
+                        CasinoSum -= 10;
+                        if (CasinoSum <= 21)
                         {
                             break;
                         }
@@ -211,7 +214,7 @@ namespace BlackJack
         #region Abandons
         private void Abandon()
         {
-            DialogResult warn = MessageBox.Show("Si vous recommencez, vous perdez " + Mise + "crédits.",
+            DialogResult warn = MessageBox.Show("Si vous recommencez, vous perdez " + bet + "crédits.",
                  "Attention",
                  MessageBoxButtons.YesNo,
                  MessageBoxIcon.Warning);
@@ -219,16 +222,16 @@ namespace BlackJack
             if (warn == DialogResult.Yes)
             {
                 ArgentAbandon();
-                Reinitialiser();
+                BlackjackAction.Restart(CasinoCards, UserCards, allCards);
             }
 
             else { return; }
         }
         private void ArgentAbandon()
         {
-            Argent -= Mise;
-            sommecasino = 0; sommejoueur = 0;
-            lblBal.Text = Def + Argent;
+            Money -= bet;
+            CasinoSum = 0; PlayerSum = 0;
+            lblBal.Text = Def + Money;
             Fin = true;
             Distr = false;
         }
@@ -259,7 +262,7 @@ namespace BlackJack
             Image Arriere = Properties.Resources.b1fv;
             pictureBoxJoueur.Image = Arriere;
             pictureBoxJoueur2.Image = Arriere;
-            pictureBoxCasino.Image = Arriere;
+            pictureBoxCasino1.Image = Arriere;
             pictureBoxCasino2.Image = Arriere;
         }
 
@@ -268,26 +271,26 @@ namespace BlackJack
             Distr = true;
             Fin = false;
 
-            sommejoueur = 0;
-            sommecasino = 0;
+            PlayerSum = 0;
+            CasinoSum = 0;
 
             #region init Joueur // Génération cartes Joueur
             int CarteAlea1 = CarteAleatoire();
-            Cartes carte1 = jeu[CarteAlea1];
-            CartesUtilisees.Add(CarteAlea1);
+            Cards carte1 = allCards[CarteAlea1];
+            UsedCards.Add(CarteAlea1);
             int CarteAlea2 = CarteAleatoire();
 
-            while (CartesUtilisees.Contains(CarteAlea2))
+            while (UsedCards.Contains(CarteAlea2))
             {
                 CarteAlea2 = CarteAleatoire();
             }
             CarteAlea2 = 1 * CarteAlea2;
 
-            Cartes carte2 = jeu[CarteAlea2];
-            CartesUtilisees.Add(CarteAlea2);
+            Cards carte2 = allCards[CarteAlea2];
+            UsedCards.Add(CarteAlea2);
 
-            ListeCarteJoueur.Add(carte1);
-            ListeCarteJoueur.Add(carte2);
+            UserCards.Add(carte1);
+            UserCards.Add(carte2);
 
             pictureBoxJoueur.ImageLocation = carte1.Image;
             pictureBoxJoueur.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -298,16 +301,16 @@ namespace BlackJack
 
             #endregion
 
-            if (sommejoueur == 22)
+            if (PlayerSum == 22)
             {
-                sommejoueur = 21;
-                lblJoueur.Text = JoueurTX + sommejoueur;
+                PlayerSum = 21;
+                lblJoueur.Text = JoueurTX + PlayerSum;
             }
 
-            else if (sommecasino == 22)
+            else if (CasinoSum == 22)
             {
-                sommecasino = 21;
-                lblTxCasino.Text = CasinoTX + sommecasino;
+                CasinoSum = 21;
+                lblTxCasino.Text = CasinoTX + CasinoSum;
             }
 
             AdditionJoueur();
@@ -318,10 +321,10 @@ namespace BlackJack
 
         public void OPArgent()
         {
-            if (sommejoueur == 21)
+            if (PlayerSum == 21)
             {
-                int moitie = Mise / 2;
-                Argent = (Mise * 2) - moitie;
+                int moitie = bet / 2;
+                Money = (bet * 2) - moitie;
             }
 
         }
@@ -329,44 +332,44 @@ namespace BlackJack
         #region Conditions Score
         private void ConditionsScoreDistr()
         {
-            int moitie = Mise / 2;
-            if (sommejoueur == 21)
+            int moitie = bet / 2;
+            if (PlayerSum == 21)
             {
                 MessageBox.Show("Vous avez gagné ! (Blackjack) ",
                     "Félicitations", MessageBoxButtons.OK,
                     MessageBoxIcon.Exclamation);
-                Argent = (Mise * 2) + moitie;
-                lblBal.Text = Def + Argent;
-                Reinitialiser();
+                Money = (bet * 2) + moitie;
+                lblBal.Text = Def + Money;
+                BlackjackAction.Restart(CasinoCards, UserCards, allCards);
             }
 
-            else if (sommejoueur > 21)
+            else if (PlayerSum > 21)
             {
                 Defaite();
             }
 
-            else if (sommecasino == 21 && sommejoueur != 21)
+            else if (CasinoSum == 21 && PlayerSum != 21)
             {
-                Argent = -Mise;
+                Money = -bet;
                 MessageBox.Show("Vous avez perdu ! (Blackjack)");
-                lblBal.Text = Def + Argent;
-                Reinitialiser();
+                lblBal.Text = Def + Money;
+                BlackjackAction.Restart(CasinoCards, UserCards, allCards);
             }
         }
 
         private void ConditionsScoreCarte()
         {
-            if (sommejoueur == 21)
+            if (PlayerSum == 21)
             {
-                int moitie = Mise / 2;
+                int moitie = bet / 2;
                 MessageBox.Show("Vous avez gagné ! (Blackjack) ",
                     "Félicitations", MessageBoxButtons.OK,
                     MessageBoxIcon.Exclamation);
-                Argent += (Mise * 2) + moitie;
-                lblBal.Text = Def + Argent;
-                Reinitialiser();
+                Money += (bet * 2) + moitie;
+                lblBal.Text = Def + Money;
+                BlackjackAction.Restart(CasinoCards, UserCards, allCards);
             }
-            if (sommejoueur > 21)
+            if (PlayerSum > 21)
             {
                 Defaite();
             }
@@ -374,28 +377,28 @@ namespace BlackJack
 
         void BlackJack()
         {
-            int moitie = Mise / 2;
+            int moitie = bet / 2;
             MessageBox.Show("Vous avez gagné ! (Blackjack) ",
                 "Félicitations", MessageBoxButtons.OK,
                 MessageBoxIcon.Exclamation);
-            Argent += (Mise * 2) + moitie;
-            lblBal.Text = Def + Argent;
-            Reinitialiser();
+            Money += (bet * 2) + moitie;
+            lblBal.Text = Def + Money;
+            BlackjackAction.Restart(CasinoCards, UserCards, allCards);
         }
 
         private void ConditionsScore()
         {
-            if (sommejoueur == 21)
+            if (PlayerSum == 21)
             {
                 BlackJack();
             }
 
-            else if (sommecasino > 21)
+            else if (CasinoSum > 21)
             {
                 Victoire();
             }
 
-            else if (sommecasino == 21 && sommejoueur != 21)
+            else if (CasinoSum == 21 && PlayerSum != 21)
             {
                 if (Distr == false && Fin == true) return;
                 else
@@ -405,21 +408,21 @@ namespace BlackJack
                         "Perdu !",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
-                    Reinitialiser();
+                    BlackjackAction.Restart(CasinoCards, UserCards, allCards);
                 }
             }
 
-            else if (sommejoueur > sommecasino)
+            else if (PlayerSum > CasinoSum)
             {
                 Victoire();
             }
 
-            else if (sommejoueur < sommecasino)
+            else if (PlayerSum < CasinoSum)
             {
                 Defaite();
             }
 
-            else if (sommejoueur == sommecasino)
+            else if (PlayerSum == CasinoSum)
             {
                 Egalite();
             }
@@ -429,24 +432,24 @@ namespace BlackJack
         }
         public void Defaite()
         {
-            Argent -= Mise;
-            lblBal.Text = Def + Argent;
-            MessageBox.Show("Vous avez perdu ! Votre argent: " + Argent,
+            Money -= bet;
+            lblBal.Text = Def + Money;
+            MessageBox.Show("Vous avez perdu ! Votre argent: " + Money,
                 "Perdu !",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Error);
-            Reinitialiser();
+            BlackjackAction.Restart(CasinoCards, UserCards, allCards);
         }
 
         public void Victoire()
         {
-            Argent += Mise;
-            lblBal.Text = Def + Argent;
-            MessageBox.Show("Vous avez gagné ! Votre argent: " + Argent,
+            Money += bet;
+            lblBal.Text = Def + Money;
+            MessageBox.Show("Vous avez gagné ! Votre argent: " + Money,
                 "Gagné !",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
-            Reinitialiser();
+            BlackjackAction.Restart(CasinoCards, UserCards, allCards);
         }
 
         public void Egalite()
@@ -455,11 +458,11 @@ namespace BlackJack
                 "Egalité",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Warning);
-            Reinitialiser();
+            BlackjackAction.Restart(CasinoCards, UserCards, allCards);
         }
         public void Banqueroute()
         {
-            if (Argent == 0)
+            if (Money == 0)
             {
                 MessageBox.Show("Adieu !",
                     "Adieu",
