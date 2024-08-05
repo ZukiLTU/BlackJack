@@ -1,5 +1,8 @@
 ﻿using BlackJack.Card;
 using BlackJack.Code.States;
+using BlackJack.Properties;
+using Serilog;
+using Serilog.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,6 +31,8 @@ namespace BlackJack.Code.Actions.GameActions
         public string PlayerText => $"Joueur : {PlayerSum}";
         public string CasinoText => $"Casino : {CasinoSum}";
 
+        private LoggerConfiguration logConf = new LoggerConfiguration();
+        private Logger logger;    
         public BlackjackAction(int playerSum, int casinoSum, List<Cards> playerCards, List<Cards> casinoCards, List<Cards> allCards, Label playerLabel, Label casinoLabel, List<PictureBox> p_pictureBoxes, List<PictureBox> c_pictureBoxes)
         {
             PlayerSum = playerSum;
@@ -39,29 +44,48 @@ namespace BlackJack.Code.Actions.GameActions
             _playerLabel = playerLabel; 
             _playerPictureBoxes = p_pictureBoxes;
             _casinoPictureBoxes = c_pictureBoxes;
+            logger = logConf.WriteTo.Console().CreateLogger();
         }
 
         public void Restart(List<Cards> casinoCards, List<Cards> userCards, List<Cards> usedCards)
         {
-            PlayerSum = 0;
-            CasinoSum = 0;
+            try
+            {
+                PlayerSum = 0;
+                CasinoSum = 0;
 
-            //Distr = false;
-            //Fin = true;
+                //Distr = false;
+                //Fin = true;
 
-            _playerLabel.Text = PlayerText + PlayerSum;
-            _casinoLabel.Text = CasinoText + CasinoSum;
-            //pictureBoxJoueur3.Visible = false;
-            //pictureBoxCasino4.Visible = false;
+                _playerLabel.Text = PlayerText + PlayerSum;
+                _casinoLabel.Text = CasinoText + CasinoSum;
+                //pictureBoxJoueur3.Visible = false;
+                //pictureBoxCasino4.Visible = false;
 
-            //textBoxInt.Clear();
-            casinoCards.Clear();
-            userCards.Clear();
-            usedCards.Clear();
+                //textBoxInt.Clear();
+                _casinoCards.Clear();
+                _playerCards.Clear();
+                //_usedCards.Clear();
 
-            //Banqueroute();
-            //InitCartes();
-
+                //Banqueroute();
+                //InitCartes();
+                if(_playerPictureBoxes.Count > 2)
+                    _playerPictureBoxes.Remove(_playerPictureBoxes.Last());
+                foreach (var item in _playerPictureBoxes)
+                {
+                    item.BackgroundImage = Resources.b1fv;
+                }
+                if(_casinoPictureBoxes.Count > 2)
+                    _casinoPictureBoxes.Remove(_casinoPictureBoxes.Last());
+                foreach (var item in _casinoPictureBoxes)
+                {
+                    item.BackgroundImage = Resources.b1fv;
+                }
+            }    
+            catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
         public int RandomCard(List<Cards> allCards)
         {
@@ -216,6 +240,7 @@ namespace BlackJack.Code.Actions.GameActions
             else if (pSum > 21)
             {
                 new DefeatState(_playerCards, _casinoCards, _allCards, _playerLabel, _casinoLabel).DisplayState(bal);
+                Restart(default, default, default);
             }
 
             else if (cSum == 21 && pSum != 21)

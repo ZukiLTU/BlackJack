@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using System.Windows.Forms.ComponentModel.Com2Interop;
 using BlackJack.Card;
 using BlackJack.Code.Actions.GameActions;
+using Serilog;
 
 namespace BlackJack
 {
@@ -42,7 +43,6 @@ namespace BlackJack
         List<int> UsedCards { get; set; } = new List<int>();
         List<Cards> UserCards { get; set; } = new List<Cards>();
         List<Cards> CasinoCards { get; set; } = new List<Cards>();
-
         #region 52Cartes
 
         List<Cards> allCards = new List<Cards>()
@@ -192,20 +192,30 @@ namespace BlackJack
 
         private void distribuerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DetectionCredits();
-            Money -= bet;
-            if(PlayerSum == 22)
+            if (Distr)
             {
-                PlayerSum = 21;
-                lblJoueur.Text = JoueurTX + PlayerSum;
-                BlackJack();
+                MessageBox.Show("A faire", "Klaida",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+            }
+            else
+            {
+                DetectionCredits();
+                Distr = true;
+                Money -= bet;
+                if (PlayerSum == 22)
+                {
+                    PlayerSum = 21;
+                    lblJoueur.Text = JoueurTX + PlayerSum;
+                    BlackJack();
+                }
             }
         }
 
         private void carteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
-            if (Fin == true)
+            if (Fin)
             {
                 if (Lietuviu)
                 {
@@ -225,7 +235,7 @@ namespace BlackJack
 
             }
 
-            else if (Distr == false)
+            else if (!Distr)
             {
                 if (Lietuviu)
                 {
